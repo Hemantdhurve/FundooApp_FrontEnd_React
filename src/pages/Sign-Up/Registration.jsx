@@ -1,5 +1,7 @@
 import React from 'react'
 import './Registration.css'; 
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 
 function Registration() {
@@ -10,23 +12,23 @@ function Registration() {
             <div className='title'> Fundoo</div>
             <div className='sub-title'> Create your Fundoo Account</div>
 
-            <div>
+            <div className='data-col'>
               <div className='data'>
-                  <input name='FirstName' placeholder='Enter First name' type={'FirstName'} label={'FirstName'} />
-                  <input name='LastName' placeholder='Enter Last name' type={'LastName'} label={'LastName'} />
+                <TextField id="outlined-basic" label="First Name" variant="outlined" size='small' margin='normal'/>          
+                <TextField id="outlined-basic" label="Last Name" variant="outlined" size='small' margin='normal'/>          
               </div>
               <div className='user'>
-                <input name='UserName' placeholder='UserName' type={'UserName'} label={'UserName'} />
+                <TextField id="outlined-basic" label="Username" variant="outlined" size='small' margin='normal' fullWidth='bool'/>          
               </div>
               <div className='p-tag'>
                 <p>You can use Letters,numbers or Periods</p> 
               </div>
               <div className='current'>
-                <a className='ancr' href="">Use my current email address instead</a>
+              <Button variant="text">Use my current email address instead</Button>
               </div>
               <div className='data'>
-                <input name='Password' placeholder='Password' type={'FirstName'} label={'FirstName'} />
-                <input name='Confirm' placeholder='Confirm' type={'LastName'} label={'LastName'} />
+                <TextField id="outlined-basic" label="Password" variant="outlined" size='small' margin='normal'/>          
+                <TextField id="outlined-basic" label="Confirm" variant="outlined" size='small' margin='normal'/>          
               </div>
               <div className='p-tag'>
                 <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
@@ -36,15 +38,15 @@ function Registration() {
               </div><br></br>
               <div className='bot-nxt-bt'>
                 <div className='bot-line'>
-                  <a href=""> Sign-In Instead</a>
+                <Button variant="text">Sign-in Instead</Button>
                 </div>
-                <button>Next</button>
+                <Button variant="contained">Next</Button>
               </div>
-              
+
             </div>
           </div>
           <div className='signup-logo'>
-            <img className='lgo' src='./assets/logo.png' alt="image"/>
+            <img className='lgo' src='./assets/signup.svg' alt="image"/>
             <p>One account. All of Fundoo working for you.</p>
           </div>
         </form>

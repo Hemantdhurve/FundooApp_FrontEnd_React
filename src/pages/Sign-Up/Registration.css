@@ -1,10 +1,11 @@
     body{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .main{
-        width: 570px;
+        width: 516px;
         height: 600px;
     }
     .title{
@@ -40,10 +41,18 @@
         width: auto;
 
     }
+    .data-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
     .data{
         display: flex;
+        width: 510px;
     }
-    .data input{
+    /* .data input{
         border: 1px solid rgb(172, 171, 171);
         border-radius: 5px;
         outline: none;
@@ -52,31 +61,35 @@
         display: flex;
         padding-right: 50px;
         border-right-width: 2px;
+    } */
+    .user TextField {
+        width: 448px;
     }
-    .user input{
+    /* .user input{
         border: 1px solid rgb(172, 171, 171);
         border-radius: 5px;
         padding: 15px 330px 15px 8px;
         outline: none;
         margin: 5px 29px ;
-    }
+    } */
     .p-tag{
         width: 504px;
-        padding-left: 33px;
+        padding-left: 15px;
         padding-top: 0px;
-        border-right-width: 0px;
-        margin-bottom: 10px;
-        margin-top: 5px;
+        margin-bottom: -8px;
+        margin-top: -17px;
         margin-right: 0px;
+        font-size: 13px;
     }
     .current{
     color: #1a73e8;
-    padding-left: 33px;
-    margin-bottom: 40px;
+    padding-left: 3px;
+    margin-bottom: 16px;
     margin-top: 5px;
+    font-size: 16px;
     }
     .checkbx{
-        margin-left: 28px;
+        margin-left: 10px;
         size: 40px;
     }
     .bot-nxt-bt{
@@ -88,14 +101,16 @@
     }
 
     .signup-logo{
-        width: 250px;
+        width: 240px;
         padding-top: 200px;
         justify-items: center;
-        padding-top: 155px;
+        padding-top: 145px;
+        text-align: center;
+        padding-right: 40px;
     }
     .lgo{
-        height: 250px;
-        width: 200px;
+        height: 244px;
+        width: 244px;
     }
     .ancr{
         margin-left: 0px;
