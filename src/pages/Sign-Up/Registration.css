@@ -50,7 +50,9 @@
     }
     .data{
         display: flex;
-        width: 510px;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 460px;
     }
     /* .data input{
         border: 1px solid rgb(172, 171, 171);
@@ -62,8 +64,8 @@
         padding-right: 50px;
         border-right-width: 2px;
     } */
-    .user TextField {
-        width: 448px;
+    .user {
+        width: 460px;
     }
     /* .user input{
         border: 1px solid rgb(172, 171, 171);
@@ -77,9 +79,10 @@
         padding-left: 15px;
         padding-top: 0px;
         margin-bottom: -8px;
-        margin-top: -17px;
+        margin-top: -19px;
         margin-right: 0px;
         font-size: 13px;
+        
     }
     .current{
     color: #1a73e8;
@@ -97,6 +100,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 35px;
+        width: 460px;
         
     }
 
@@ -112,6 +116,6 @@
         height: 244px;
         width: 244px;
     }
-    .ancr{
-        margin-left: 0px;
-    }
+   .lgo-txt{
+    margin-top: 5px;
+   }

@@ -47,7 +47,7 @@ function Registration() {
           </div>
           <div className='signup-logo'>
             <img className='lgo' src='./assets/signup.svg' alt="image"/>
-            <p>One account. All of Fundoo working for you.</p>
+            <p className='lgo-txt' >One account. All of Fundoo working for you.</p>
           </div>
         </form>
       </div>
