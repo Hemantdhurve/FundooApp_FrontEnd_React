@@ -9,6 +9,8 @@ import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import { Tooltip } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 
 function Header() {
 
@@ -17,7 +19,9 @@ function Header() {
         <div className='header-box'>
             <div className='inner-header'>
                 <div className='main-menu'>
-                    <Button  variant="text" color="inherit"><MenuIcon /></Button>   
+                    <Tooltip title='Main-menu'>
+                        <IconButton size='large'><MenuIcon size='large'/></IconButton>
+                    </Tooltip>
                 </div>
                 <div className='keeplogo'>
                     <img className='keepimg' src='./assets/keep.png' alt="Signup Logo"/>
@@ -29,13 +33,23 @@ function Header() {
                  </div>
                  <div className='five-icons'>
                     <div className='ref-set-icon'>
-                        <Button variant="text" color="inherit" size="small"><RefreshIcon size="small" /></Button> 
-                        <Button variant="text" color="inherit"><ViewAgendaOutlinedIcon /></Button> 
-                        <Button variant="text" color="inherit"><SettingsIcon /> </Button>                  
+                        <Tooltip title='Refresh'>
+                            <IconButton color="inherit"><RefreshIcon size='large' /></IconButton> 
+                        </Tooltip>
+                        <Tooltip title='List view'>
+                            <IconButton color="inherit"><ViewAgendaOutlinedIcon size='large'/></IconButton>
+                        </Tooltip> 
+                        <Tooltip title='Settings'>
+                            <IconButton color="inherit"><SettingsIcon size='large'/> </IconButton> 
+                        </Tooltip>                 
                     </div>
                     <div className='app-acc-icon'>
-                        <Button color="inherit"><AppsIcon /></Button>
-                        <Button variant="text" color="inherit"><AccountCircleRoundedIcon /></Button>
+                        <Tooltip title='Fundoo apps'>
+                            <IconButton color="inherit"><AppsIcon size='large'/></IconButton>
+                        </Tooltip>
+                        <Tooltip title='Google Account'>
+                            <IconButton color="inherit"><AccountCircleRoundedIcon size='large'/></IconButton>
+                        </Tooltip>
                     </div>
                  </div>
             </div>

@@ -6,11 +6,13 @@
     width: 100vw;
     height: 45px;
     margin-top: 30px;
-    justify-content: center;
+    justify-content:center;
+    position: relative;
+    left: 10px;
 
 }
 .inner-notebox{
-    width: 600px;
+    width: 640px;
     height:48px;
     box-sizing: border-box;
     border: 1px solid rgb(199, 194, 194);  
@@ -20,5 +22,5 @@
     
 }
 .note-txt{
-    width: 435px;
+    width: 480px;
 }

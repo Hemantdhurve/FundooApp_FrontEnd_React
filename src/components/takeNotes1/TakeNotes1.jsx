@@ -10,7 +10,7 @@ import { Tooltip } from '@mui/material';
 
 function TakeNotes1() {
   return (
-    <div>
+    <div >
       <div className='note-box'>
 
         <div className="inner-notebox">
