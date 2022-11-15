@@ -1,0 +1,90 @@
+body{
+    padding-top: 0px;
+}
+
+.header-box{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width:100vw;
+    border: 1px solid rgb(199, 194, 194);
+    border-top: hidden;
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    position: relative;
+
+}
+
+.inner-header{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}
+.main-menu{
+    padding: 1px;
+    padding-bottom: 2px;
+    padding-top: 5px;
+}
+
+.keeplogo{
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+}
+.keepimg{
+    height: 44px;
+    width: 46px;
+}
+.keep-txt{  
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    font-weight:600;
+    color:rgb(116, 114, 114);
+
+}
+.searchBar{
+    width: 680px;
+    height: 46px;
+    border-color: black;
+    box-shadow: 2px 2px 2px #e0e0e0;
+    border-radius: 7px;
+    background-color: rgb(240, 243, 245);
+    
+}
+
+.icon-search{
+    position: relative;
+    left: 15px;
+    top: 12px;
+}
+.inner-search{
+    position: relative;
+    left: 60px;
+    bottom: 20px;
+}
+.five-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 60px;
+    width: 30%;
+}
+.ref-set-icon{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 5%;
+    
+}
+.app-acc-icon{
+   
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    position: relative;
+    left: 10%;
+}

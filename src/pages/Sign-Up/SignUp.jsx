@@ -62,7 +62,7 @@ function SignUp()
         let checkLastName=lastnameRegex.test(signUpstate.lastName)
         let checkEmail=emailRegex.test(signUpstate.email)
         let checkPassword=passwordRegex.test(signUpstate.password)
-        let checkConfirmPassword=passwordRegex.test(signUpstate.password)
+        let checkConfirmPassword=passwordRegex.test(signUpstate.checkPassword)
 
         if(checkFirstName===true)
         {
@@ -96,21 +96,20 @@ function SignUp()
         if(checkPassword===true)
         {
           setRegexState((prevState)=>({...prevState, passwordBorder:false,passwordHelper:""}))
-
-            if(checkConfirmPassword===true)
-            {
-            setRegexState((prevState)=>({...prevState, confirmPasswordBorder:false,confirmPasswordHelper:""}))
-            }
-            else if(checkConfirmPassword===false)
-            {
-            setRegexState((prevState)=>({...prevState, confirmPasswordBorder:true,confirmPasswordHelper:"Password not matched.."}))
-    
-            }
         }
         else if(checkPassword===false)
         {
           setRegexState((prevState)=>({...prevState, passwordBorder:true,passwordHelper:"Enter a Password"}))
   
+        }
+
+        if(checkConfirmPassword===true)
+        {
+          setRegexState((prevState)=>({...prevState, confirmPasswordBorder:false,confirmPasswordHelper:""}))
+        }
+          else if(checkConfirmPassword===false)
+        {
+          setRegexState((prevState)=>({...prevState, confirmPasswordBorder:true,confirmPasswordHelper:"Password not matched.."}))
         }
         
         if(checkFirstName===true && checkLastName===true && checkEmail===true && checkPassword===true && checkConfirmPassword===true)
@@ -160,7 +159,6 @@ function SignUp()
                     </div>
                     <Button onClick={signUpSuccess} variant="contained">Next</Button>
                 </div>
-
             </div>
           </div>
 
