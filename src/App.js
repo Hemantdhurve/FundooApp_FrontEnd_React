@@ -1,15 +1,15 @@
 import './App.css';
-import Login from './pages/Sign-In/Login';
-import Registration from './pages/Sign-Up/Registration'
+import SignIn from './pages/Sign-In/SignIn';
+import SignUp from './pages/Sign-Up/SignUp';
 
 
 
 function App() {
   return (
-    <>
-      <Login />
-      <Registration />
-      </>
+    <div>
+      <SignIn />
+      <SignUp />
+      </div>
   );
 }
 
