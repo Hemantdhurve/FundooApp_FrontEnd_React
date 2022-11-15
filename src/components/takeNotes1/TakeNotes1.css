@@ -1,0 +1,24 @@
+.note-box {
+    display: flex;
+    flex-direction: row;
+    border-color: black;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 45px;
+    margin-top: 30px;
+    justify-content: center;
+
+}
+.inner-notebox{
+    width: 600px;
+    height:48px;
+    box-sizing: border-box;
+    border: 1px solid rgb(199, 194, 194);  
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    border-radius: 8px;
+    padding-left: 10px;
+    
+}
+.note-txt{
+    width: 435px;
+}

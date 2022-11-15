@@ -38,7 +38,6 @@ function Header() {
                         <Button variant="text" color="inherit"><AccountCircleRoundedIcon /></Button>
                     </div>
                  </div>
-                
             </div>
         </div >
     )
