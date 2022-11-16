@@ -26,7 +26,7 @@ function TakeNotes2() {
                 </Tooltip>
             </div>
             <div className='description'>
-              <InputBase className='note-txt2' placeholder="Take a note..." />
+              <InputBase className='note-txt2' type='text' placeholder="Take a note..." />
             </div>
             <div className='logo-container'>
             <div className='logo-note2'>
@@ -55,8 +55,8 @@ function TakeNotes2() {
                         <IconButton size='large'><RedoOutlinedIcon /></IconButton>
                   </Tooltip>
                 </div>
-                <div className='close-btn'>
-                <Button variant="text" color='inherit' >Close</Button>
+                <div>
+                  <Button variant="text" color='inherit' >Close</Button>
                 </div>
             </div>
           </div>
