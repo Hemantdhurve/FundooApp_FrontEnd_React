@@ -3,6 +3,7 @@ import SignIn from './pages/Sign-In/SignIn';
 import SignUp from './pages/Sign-Up/SignUp';
 import Header from './components/header/Header';
 import TakeNotes1 from './components/takeNotes1/TakeNotes1';
+import TakeNotes2 from './components/takeNotes2/TakeNotes2';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <SignUp /> */}
       <Header />
       <TakeNotes1 />
+      <TakeNotes2 />
       </div>
   );
 }

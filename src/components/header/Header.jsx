@@ -28,9 +28,16 @@ function Header() {
                     <a className='keep-txt' href=''>Keep</a>
                  </div>
                  <div className='searchBar'>
-                    <div className='icon-search'><SearchIcon fontSize="medium" color="action" /></div>
+                    <div className='icon-search'>
+                        <Tooltip title='Search'>
+                            <IconButton color="inherit"><SearchIcon size='large' /></IconButton>  
+                        </Tooltip>
+                    </div>
                     <div className='inner-search'><InputBase placeholder="Search" /></div>
                  </div>
+                 <div className='empty-div'></div>
+
+                 
                  <div className='five-icons'>
                     <div className='ref-set-icon'>
                         <Tooltip title='Refresh'>

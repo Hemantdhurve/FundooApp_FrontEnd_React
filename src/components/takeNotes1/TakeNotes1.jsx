@@ -1,6 +1,5 @@
 import React from 'react';
 import './TakeNotes1.css';
-
 import IconButton from '@mui/material/IconButton';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import BrushIcon from '@mui/icons-material/Brush';
