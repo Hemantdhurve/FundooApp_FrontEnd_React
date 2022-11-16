@@ -15,7 +15,6 @@ import IconButton from '@mui/material/IconButton';
 function Header() {
 
     return (
-
         <div className='header-box'>
             <div className='inner-header'>
                 <div className='main-menu'>
@@ -26,19 +25,19 @@ function Header() {
                 <div className='keeplogo'>
                     <img className='keepimg' src='./assets/keep.png' alt="Signup Logo"/>
                     <a className='keep-txt' href=''>Keep</a>
-                 </div>
-                 <div className='searchBar'>
+                </div>
+                <div className='searchBar'>
                     <div className='icon-search'>
                         <Tooltip title='Search'>
                             <IconButton color="inherit"><SearchIcon size='large' /></IconButton>  
                         </Tooltip>
                     </div>
                     <div className='inner-search'><InputBase placeholder="Search" /></div>
-                 </div>
-                 <div className='empty-div'></div>
+                </div>
+                <div className='empty-div'></div>
 
-                 
-                 <div className='five-icons'>
+                
+                <div className='five-icons'>
                     <div className='ref-set-icon'>
                         <Tooltip title='Refresh'>
                             <IconButton color="inherit"><RefreshIcon size='large' /></IconButton> 
@@ -58,7 +57,7 @@ function Header() {
                             <IconButton color="inherit"><AccountCircleRoundedIcon size='large'/></IconButton>
                         </Tooltip>
                     </div>
-                 </div>
+                </div>
             </div>
         </div >
     )
