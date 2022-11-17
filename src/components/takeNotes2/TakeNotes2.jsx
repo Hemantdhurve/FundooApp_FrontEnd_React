@@ -20,7 +20,7 @@ function TakeNotes2() {
         <div  className='note2-box'>
           <div className='inner-box'>
             <div className="titlebox1">
-                <InputBase className='note-txt2' placeholder="Title" />
+                <InputBase className='note-txt2' placeholder="Title"/>
                 <Tooltip title='Pin note'>
                     <IconButton size='large'><PushPinOutlinedIcon /></IconButton>
                 </Tooltip>
@@ -30,28 +30,28 @@ function TakeNotes2() {
             </div>
             <div className='logo-container'>
             <div className='logo-note2'>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Remind me'>
                         <IconButton size='large'><AddAlertOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Collaborator'>
                         <IconButton size='large'><PersonAddAltOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Background options'>
                         <IconButton size='large'><ColorLensOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Add image'>
                         <IconButton size='large'><InsertPhotoOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Archive'>
                         <IconButton size='large'><ArchiveOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='More'>
                         <IconButton size='large'><MoreVertOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Undo'>
                         <IconButton size='large'><UndoOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Redo'>
                         <IconButton size='large'><RedoOutlinedIcon /></IconButton>
                   </Tooltip>
                 </div>

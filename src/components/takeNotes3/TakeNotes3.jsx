@@ -29,22 +29,22 @@ function TakeNotes2() {
               <InputBase className='note-txt3' placeholder="Take a note..." />
             </div>
             <div className='logo-container3'>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Remind me'>
                         <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Collaborator'>
                         <IconButton size='small'><PersonAddAltOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Background options'>
                         <IconButton size='small'><ColorLensOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Add image'>
                         <IconButton size='small'><InsertPhotoOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='Archive'>
                         <IconButton size='small'><ArchiveOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Pin note'>
+                  <Tooltip title='More'>
                         <IconButton size='small'><MoreVertOutlinedIcon /></IconButton>
                   </Tooltip>
             </div>

@@ -23,7 +23,7 @@
     justify-content: space-between;
 }
 .note-txt3{
-    padding-left: 2.5%;   
+    padding-inline-start: 3%;
 }
 .description3{
     height: 50%;

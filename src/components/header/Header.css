@@ -43,7 +43,7 @@ body{
     align-items: center;
 }
 .searchBar{
-    width: 54%;
+    width: 50%;
     height: 80%;
     display: flex;
     border-color: black;
@@ -51,8 +51,7 @@ body{
     border-radius: 7px;
     background-color: rgb(240, 243, 245);
     position: relative;
-    align-items: center; 
-    padding-left: 10px; 
+    align-items: center;
 }
 
 .icon-search{
@@ -63,13 +62,13 @@ body{
     align-items: center;
 }
 .empty-div{
-    width:10% ;
+    width:14% ;
 }
 .five-icons{
     display: flex;
     align-items: center;
     height: 74%;
-    width:18% ;
+    width:17% ;
     justify-content: space-between;
 }
 .ref-set-icon{

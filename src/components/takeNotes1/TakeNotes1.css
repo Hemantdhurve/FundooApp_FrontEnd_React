@@ -8,15 +8,15 @@
     justify-content: center;
 }
 .inner-notebox{
-    width: 50%;
+    width: 45%;
     box-sizing: border-box;
     border: 1px solid rgb(199, 194, 194);  
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     border-radius: 8px;
-    padding-left: 10px;
     align-items: center;
+    padding-inline-start: 1%;
     
 }
 .note-txt{
-    width: 78%;
+    width: 75%;
 }
