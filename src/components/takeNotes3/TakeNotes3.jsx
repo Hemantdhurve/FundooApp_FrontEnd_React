@@ -20,14 +20,14 @@ function TakeNotes2() {
         <div  className='note3-box'>
           <div className='inner-box3'>
             <div className="titlebox3">
-                <InputBase className='note-txt3' placeholder="Title" />
+                {/* <InputBase className='note-txt3' placeholder="Title" /> */}
                 <Tooltip title='Pin note'>
                     <IconButton size='small'><PushPinOutlinedIcon /></IconButton>
                 </Tooltip>
             </div>
-            <div className='description3'>
+            {/* <div className='description3'>
               <InputBase className='note-txt3' placeholder="Take a note..." />
-            </div>
+            </div> */}
             <div className='logo-container3'>
                   <Tooltip title='Remind me'>
                         <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>

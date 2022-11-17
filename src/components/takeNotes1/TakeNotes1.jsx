@@ -5,7 +5,7 @@ import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import BrushIcon from '@mui/icons-material/Brush';
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import InputBase from '@mui/material/InputBase';
-import { Tooltip } from '@mui/material';
+import { Tooltip, Typography } from '@mui/material';
 
 function TakeNotes1() {
   return (
@@ -13,11 +13,13 @@ function TakeNotes1() {
       <div className='note-box'>
 
         <div className="inner-notebox">
-          <InputBase className='note-txt' placeholder="Take a note..." />
+          <Typography className='note-txt' type='text' >Take a Note...</Typography>
+          {/* <InputBase className='note-txt' placeholder="Take a note..." /> */}
          
           {/* Tooltip is used to give title to the icon and
           IconButton is used instead of Button to get the rounded icon  */}
-
+        
+        <div className='btn'>
           <Tooltip title='New List'>
              <IconButton size='large'><CheckBoxOutlinedIcon /></IconButton>
           </Tooltip>
@@ -29,6 +31,7 @@ function TakeNotes1() {
           <Tooltip title='New note with image'>
             <IconButton size='large'><ImageOutlinedIcon /></IconButton>
           </Tooltip>
+        </div>
         </div>
       </div>
     </div>
