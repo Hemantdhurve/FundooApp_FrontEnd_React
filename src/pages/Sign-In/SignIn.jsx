@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './SignIn.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { logInApi } from '../../services/Dataservice';
+import { logInApi } from '../../services/UserService';
 
 
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
@@ -64,7 +64,9 @@ function SignIn()
       if(checkEmail===true && checkPassword===true)
       {
         logInApi(logInstate)
-        .then((response)=>{console.log(response)})
+        .then((response)=>{console.log(response)
+        localStorage.setItem("token",response.data.data)
+        })
         .catch((error)=>{console.log(error)})
         console.log('Login Successful')
       }

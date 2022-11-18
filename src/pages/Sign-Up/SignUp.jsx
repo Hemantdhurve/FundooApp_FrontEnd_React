@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './SignUp.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { signUpApi } from '../../services/Dataservice';
+import { signUpApi } from '../../services/UserService';
 
 const firstnameRegex=/^([A-Z]{1}[a-z]{2,}$)/;
 const lastnameRegex=/^([A-Z]{1}[a-z]{2,}$)/;
