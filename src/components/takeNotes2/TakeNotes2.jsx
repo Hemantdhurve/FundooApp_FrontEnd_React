@@ -39,11 +39,15 @@ function TakeNotes2(props) {
             console.log('Notes Created')
       }
 
+      //to get back to take note 1 when pressing close button onClick
+      const closeNote = () => {
+            props.closeTakeNote2()
+      }
 
       return (
             <div>
                   <div className='note2-box'>
-                        <div className='inner-box' >
+                        <div className='inner-box' onClick={closeNote}>
                               <div className="titlebox1">
                                     <InputBase className='note-txt2' placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>

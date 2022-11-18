@@ -11,6 +11,9 @@ function Dashboard() {
     const openTakeNote2=()=>{
         setToggle(true)
     }
+    const closeTakeNote2=()=>{
+        setToggle(false)
+    }
 
     // useEffect(()=>{
     //     getAllNoteAPI()
@@ -26,7 +29,7 @@ function Dashboard() {
         <Header />
         <div>
             {
-                toggle ? <TakeNotes2 /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
+                toggle ? <TakeNotes2 closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
             }
         </div>
 
