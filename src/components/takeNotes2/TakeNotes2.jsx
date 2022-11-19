@@ -14,17 +14,28 @@ import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 import Button from '@mui/material/Button';
 import { createNoteAPI } from '../../services/Dataservice'
+import ColorPopper from '../colorPopper/ColorPopper';
 
 function TakeNotes2(props) {
       const [createNote, setCreateNote] = useState({
             title: '',
-            description: ''
+            description: '',
+            archieve:false,
+            backgroundcolor:''
+
       })
       const takeTitle = (event) => {
             setCreateNote(prevState => ({ ...prevState, title: event.target.value }))
       }
       const takeDescription = (event) => {
             setCreateNote(prevState => ({ ...prevState, description: event.target.value }))
+      }
+      const noteArchieve=()=>{
+            setCreateNote(prevState=> ({...prevState, archieve: true}))
+      }
+
+      const noteColor=(bgColor)=>{
+            setCreateNote(prevState=> ({...prevState, backgroundcolor: bgColor}))
       }
 
       const closeButton = () => {
@@ -43,8 +54,8 @@ function TakeNotes2(props) {
      
       return (
             <div>
-                  <div className='note2-box'>
-                        <div className='inner-box'>
+                  <div className='note2-box' >
+                        <div className='inner-box' style={{backgroundColor:createNote.backgroundcolor}}>
                               <div className="titlebox1">
                                     <InputBase className='note-txt2' placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>
@@ -62,13 +73,15 @@ function TakeNotes2(props) {
                                           <Tooltip title='Collaborator'>
                                                 <IconButton size='large'><PersonAddAltOutlinedIcon /></IconButton>
                                           </Tooltip>
-                                          <Tooltip title='Background options'>
-                                                <IconButton size='large'><ColorLensOutlinedIcon /></IconButton>
+                                          <Tooltip title='Background options' >
+                                                <IconButton size='large'><ColorPopper noteColor={noteColor} /></IconButton>
                                           </Tooltip>
+                                          
+
                                           <Tooltip title='Add image'>
                                                 <IconButton size='large'><InsertPhotoOutlinedIcon /></IconButton>
                                           </Tooltip>
-                                          <Tooltip title='Archive'>
+                                          <Tooltip title='Archive' onClick={noteArchieve}>
                                                 <IconButton size='large'><ArchiveOutlinedIcon /></IconButton>
                                           </Tooltip>
                                           <Tooltip title='More'>

@@ -13,21 +13,32 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 import Button from '@mui/material/Button';
+import { getArchievenoteAPI } from '../../services/Dataservice';
 
-function TakeNotes2() {
+function TakeNotes3(props) {
+
+      const updateArchieve=(id)=>{
+            getArchievenoteAPI(id)
+            .then((response)=>console.log(response))
+            .catch((error)=>console.log(error))
+            console.log('Archieve Successful')
+      }
+
   return (
     <div>
         <div  className='note3-box'>
-          <div className='inner-box3'>
-            <div className="titlebox3">
+          <div className='inner-box3' style={{backgroundColor:props.note.backgroundcolor}}>
+            <div className="titlebox3" >
                 {/* <InputBase className='note-txt3' placeholder="Title" /> */}
+                <span className='note-txt3'>{props.note.title}</span>
                 <Tooltip title='Pin note'>
-                    <IconButton size='small'><PushPinOutlinedIcon /></IconButton>
+                    <IconButton size='small' className='pin-btn'><PushPinOutlinedIcon /></IconButton>
                 </Tooltip>
             </div>
-            {/* <div className='description3'>
-              <InputBase className='note-txt3' placeholder="Take a note..." />
-            </div> */}
+            <div className='description3'>
+              {/* <InputBase className='note-txt3' placeholder="Take a note..." /> */}
+              <span className='note-txt3'>{props.note.description}</span>
+            </div>
             <div className='logo-container3'>
                   <Tooltip title='Remind me'>
                         <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
@@ -41,7 +52,7 @@ function TakeNotes2() {
                   <Tooltip title='Add image'>
                         <IconButton size='small'><InsertPhotoOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Archive'>
+                  <Tooltip title='Archive' onClick={()=>updateArchieve(props.note.noteId)}>
                         <IconButton size='small'><ArchiveOutlinedIcon /></IconButton>
                   </Tooltip>
                   <Tooltip title='More'>
@@ -54,4 +65,4 @@ function TakeNotes2() {
   )
 }
 
-export default TakeNotes2;
+export default TakeNotes3;
