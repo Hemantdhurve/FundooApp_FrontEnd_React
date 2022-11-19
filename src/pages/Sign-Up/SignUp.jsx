@@ -62,7 +62,7 @@ function SignUp()
         let checkLastName=lastnameRegex.test(signUpstate.lastName)
         let checkEmail=emailRegex.test(signUpstate.email)
         let checkPassword=passwordRegex.test(signUpstate.password)
-        let checkConfirmPassword=passwordRegex.test(signUpstate.checkPassword)
+        let checkConfirmPassword=passwordRegex.test(signUpstate.password)
 
         if(checkFirstName===true)
         {
@@ -85,7 +85,7 @@ function SignUp()
 
         if(checkEmail===true)
         {
-          setRegexState((prevState)=>({...prevState, emailBorder:false,emailHelper:""}))
+          setRegexState((prevState)=>({...prevState, emailBorder:false, emailHelper:""}))
         }
         else if(checkEmail===false)
         {
@@ -112,7 +112,7 @@ function SignUp()
           setRegexState((prevState)=>({...prevState, confirmPasswordBorder:true,confirmPasswordHelper:"Password not matched.."}))
         }
         
-        if(checkFirstName===true && checkLastName===true && checkEmail===true && checkPassword===true && checkConfirmPassword===true)
+        if(checkFirstName===true && checkLastName===true && checkEmail===true && checkPassword===true )
         {
         signUpApi(signUpstate)
         .then((response)=>{console.log(response)})
@@ -135,7 +135,7 @@ function SignUp()
                     <TextField onChange={takeLastName} error={regexState.lastNameBorder} helperText={regexState.lastNameHelper} id="outlined-basic" label="Last Name" variant="outlined" size='small' margin='normal'/>          
                 </div>
                 <div className='user'>
-                    <TextField onChange={takeEmail} error={regexState.emailBorder} helperText={regexState.emailHelper} id="outlined-basic" label="Username" variant="outlined" size='small' margin='normal' fullWidth='bool'/>          
+                    <TextField onChange={takeEmail} error={regexState.emailBorder} helperText={regexState.emailHelper} id="outlined-basic" label="Username" variant="outlined" size='small' margin='normal' fullWidth={true}/>          
                 </div>
                 <div className='p-tag'>
                     <p>You can use Letters,numbers or Periods</p> 

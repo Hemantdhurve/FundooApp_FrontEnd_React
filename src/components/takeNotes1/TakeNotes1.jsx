@@ -18,7 +18,7 @@ function TakeNotes1(props) {
       <div className='note-box' >
 
         <div className="inner-notebox" onClick={openNote}>
-          <Typography className='note-txt'>Take a Note...</Typography>
+          <Typography className='note-txt' >Take a Note...</Typography>
           {/* <InputBase className='note-txt' placeholder="Take a note..." /> */}
          
           {/* Tooltip is used to give title to the icon and

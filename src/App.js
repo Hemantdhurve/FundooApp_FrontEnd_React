@@ -11,8 +11,8 @@ import Dashboard from './pages/dashboard/Dashboard';
 function App() {
   return (
     <div>
-      {/* <SignIn />
-      <SignUp /> */}
+      {/* <SignIn /> */}
+      {/* <SignUp /> */}
       {/* <Header /> */}
       {/* <TakeNotes1 /> */}
       {/* <TakeNotes2 /> */}

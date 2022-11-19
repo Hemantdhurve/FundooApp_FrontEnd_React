@@ -24,10 +24,12 @@ function TakeNotes2(props) {
             setCreateNote(prevState => ({ ...prevState, title: event.target.value }))
       }
       const takeDescription = (event) => {
-            setCreateNote(prevState => ({ ...prevState, discription: event.target.value }))
+            setCreateNote(prevState => ({ ...prevState, description: event.target.value }))
       }
 
       const closeButton = () => {
+             //to get back to take note 1 when pressing close button onClick
+            props.closeTakeNote2()
             console.log("created note", createNote)
 
             createNoteAPI(createNote)
@@ -37,17 +39,12 @@ function TakeNotes2(props) {
                   })
                   .catch((error) => { console.log(error) })
             console.log('Notes Created')
-      }
-
-      //to get back to take note 1 when pressing close button onClick
-      const closeNote = () => {
-            props.closeTakeNote2()
-      }
-
+      } 
+     
       return (
             <div>
                   <div className='note2-box'>
-                        <div className='inner-box' onClick={closeNote}>
+                        <div className='inner-box'>
                               <div className="titlebox1">
                                     <InputBase className='note-txt2' placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>

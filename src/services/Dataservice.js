@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let headerConfig={
-    headers :{Authorization : localStorage.getItem("token")}
+    headers :{Authorization : `Bearer ${localStorage.getItem("token")}`}
 }
 
 
@@ -13,7 +13,7 @@ export const createNoteAPI=(noteObj)=>{
 }
 
 export const getAllNoteAPI=()=>{
-
+ 
     let response=axios.get('https://localhost:44395/api/Notes/RetrieveAll',headerConfig)
     console.log("Get All api")
     return response;
