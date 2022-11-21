@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const logInApi=(loginObj)=>{
+export const logInApi=(logInstate)=>{
 
-    let response=axios.post('https://localhost:44395/api/User/Login',loginObj)
+    let response=axios.post('https://localhost:44395/api/User/Login',logInstate)
     return response;
 }
 

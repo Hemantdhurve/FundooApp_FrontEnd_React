@@ -1,19 +1,17 @@
 import React from 'react'
 import './TakeNotes3.css';
-import InputBase from '@mui/material/InputBase';
+// import InputBase from '@mui/material/InputBase';
 import { Tooltip } from '@mui/material';
 import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
 import IconButton from '@mui/material/IconButton';
 import AddAlertOutlinedIcon from '@mui/icons-material/AddAlertOutlined';
-import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+// import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
-import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
-import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
-import Button from '@mui/material/Button';
-import { getArchievenoteAPI } from '../../services/Dataservice';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { deletenoteAPI, getArchievenoteAPI } from '../../services/Dataservice';
 
 function TakeNotes3(props) {
 
@@ -24,11 +22,20 @@ function TakeNotes3(props) {
             console.log('Archieve Successful')
       }
 
+     
+      const deleteNote=(id)=>{
+           deletenoteAPI(id)
+            .then((response)=>console.log(response))
+            .catch((error)=>console.log(error))
+            console.log("Deletion Successful")
+      }
+
+
   return (
     <div>
         <div  className='note3-box'>
           <div className='inner-box3' style={{backgroundColor:props.note.backgroundcolor}}>
-            <div className="titlebox3" >
+          <div className="titlebox3" >
                 {/* <InputBase className='note-txt3' placeholder="Title" /> */}
                 <span className='note-txt3'>{props.note.title}</span>
                 <Tooltip title='Pin note'>
@@ -39,12 +46,18 @@ function TakeNotes3(props) {
               {/* <InputBase className='note-txt3' placeholder="Take a note..." /> */}
               <span className='note-txt3'>{props.note.description}</span>
             </div>
+            {/* 
+              {/* <InputBase className='note-txt3' placeholder="Take a note..." /> */}
+              
             <div className='logo-container3'>
                   <Tooltip title='Remind me'>
                         <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
                   </Tooltip>
-                  <Tooltip title='Collaborator'>
+                  {/* <Tooltip title='Collaborator'>
                         <IconButton size='small'><PersonAddAltOutlinedIcon /></IconButton>
+                  </Tooltip> */}
+                  <Tooltip title='Delete' onClick={()=>deleteNote(props.note.noteId)} >
+                        <IconButton size='small' ><DeleteOutlineOutlinedIcon /></IconButton>
                   </Tooltip>
                   <Tooltip title='Background options'>
                         <IconButton size='small'><ColorLensOutlinedIcon /></IconButton>
@@ -58,9 +71,10 @@ function TakeNotes3(props) {
                   <Tooltip title='More'>
                         <IconButton size='small'><MoreVertOutlinedIcon /></IconButton>
                   </Tooltip>
+                 
             </div>
-          </div>
-        </div>
+         </div>
+        </div> 
     </div> 
   )
 }

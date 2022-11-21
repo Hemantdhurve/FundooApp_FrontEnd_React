@@ -4,7 +4,6 @@ import TakeNotes2 from '../../components/takeNotes2/TakeNotes2'
 import TakeNotes1 from '../../components/takeNotes1/TakeNotes1'
 import { getAllNoteAPI } from '../../services/Dataservice'
 import TakeNotes3 from '../../components/takeNotes3/TakeNotes3'
-import { width } from '@mui/system'
 
 
 function Dashboard() {

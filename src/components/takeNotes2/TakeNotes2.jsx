@@ -6,7 +6,7 @@ import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
 import IconButton from '@mui/material/IconButton';
 import AddAlertOutlinedIcon from '@mui/icons-material/AddAlertOutlined';
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
-import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
+// import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
@@ -21,7 +21,8 @@ function TakeNotes2(props) {
             title: '',
             description: '',
             archieve:false,
-            backgroundcolor:''
+            backgroundcolor:'',
+            // delete: false
 
       })
       const takeTitle = (event) => {

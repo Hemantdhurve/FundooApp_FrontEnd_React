@@ -6,7 +6,7 @@ body{
     display: flex;
     flex-direction: row;
     height: 10vh;
-    width:99.9vw;
+    width:98.6vw;
     border: 1px solid rgb(199, 194, 194);
     border-top: hidden;
     align-items: center;
@@ -41,6 +41,7 @@ body{
     font-weight:600;
     color:rgb(116, 114, 114);
     align-items: center;
+    text-decoration: none;
 }
 .searchBar{
     width: 50%;

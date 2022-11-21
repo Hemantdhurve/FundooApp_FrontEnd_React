@@ -25,4 +25,8 @@ export const getArchievenoteAPI=(noteId)=>{
     return response;
 }
 
-
+export const deletenoteAPI=(noteId)=>{
+    let response= axios.put(`https://localhost:44395/api/Notes/Trash?noteId=${noteId}`,noteId,headerConfig)
+    console.log("Notes Deleted")
+    return response;
+}
