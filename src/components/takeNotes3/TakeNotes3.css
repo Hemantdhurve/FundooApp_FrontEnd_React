@@ -1,39 +1,92 @@
-.note3-box{
+
+.full-box3{
     display: flex;
-    flex-direction: row;
-    height: 25vh;
+    flex-direction: column;
+    height: 23vh;
     margin-top: 30px;
     width: 20vw;
-    margin-right: 15px;
-}
-
-.inner-box3{
-    width: 90vw;
+    margin-right: 16px;    
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 1px 0px 8px rgba(0,0,0,0.6);
-    padding-top: 10px;
-    justify-content: flex-end;
 }
-
-.titlebox3{
+.title-dec-pin{
     display: flex;
     flex-direction: row;
-    height: 30%;
-    justify-content: space-between;
 }
-.note-txt3{
-    padding-inline-start: 10px;
+.titlebox3{
+    display: flex;
+    flex-direction: column;
+    height: 14vh;
+    width: 100%;
+    padding: 5px;
+}
+.pintk3{
+    padding: 10px;
+}
+
+.note-title{
+    height: 5vh;
+    padding-left: 10px;
     justify-content: center;
     padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: 500;
 }
-.description3{
-    height: 34%;
+.note-desc{
+    height: 5vh;
+    padding-left: 10px;
+    justify-content: center;
     padding-top: 10px;
+    font-weight: 500;
 }
+
 .logo-container3{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;  
-    height: 30%;
+    justify-content: space-between;
+    padding: 4px; 
+    
+}
+
+
+    /* Modal CSS */
+.pin-btnmod{
+    padding-top: 13px;
+    padding-right: 10px;
+}
+.ttl-des-pin{
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+}
+.inp-div{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    padding: 15px 15px;
+    width: 100%;
+    border-radius: 2px;
+
+}
+.note-titlemod{
+    margin-bottom: 18px;
+}
+
+
+.all-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;  
+}
+.group-btnmod{
+    display: flex;
+    padding: 5px;
+    width: 65%;
+    justify-content: space-between;
+}   
+.close-btnmod{
+    margin-right: 25px;
 }
