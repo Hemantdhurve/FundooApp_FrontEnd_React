@@ -16,15 +16,22 @@ function Dashboard() {
     const closeTakeNote2=()=>{
         setToggle(false)
     }
-
-    useEffect(()=>{
+     const getNote=()=>{
         getAllNoteAPI()
         .then((response)=>{console.log(response)
             setNotesArray(response.data.data)
         })
         .catch((error)=>{console.log(error)})
         console.log('Notes List ')
+     }
+     const autoRefresh=()=>{
+        getNote()
+     }
+
+    useEffect(()=>{
+        getNote()       
     },[])
+
   
     return (
     <div>
@@ -35,7 +42,7 @@ function Dashboard() {
             }
             <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'200px'}}>
                 {
-                    notesArray.map((note)=>(<TakeNotes3 note={note}/>))
+                    notesArray.map((note)=>(<TakeNotes3 note={note} autoRefresh={autoRefresh} />))
                 }
             </div>
         </div>

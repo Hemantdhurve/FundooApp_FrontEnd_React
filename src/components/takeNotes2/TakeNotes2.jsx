@@ -22,7 +22,9 @@ function TakeNotes2(props) {
             description: '',
             archieve:false,
             backgroundcolor:'',
-            // delete: false
+            archieve: false, 
+            trash: false, 
+            pin: false
 
       })
       const takeTitle = (event) => {
@@ -75,7 +77,7 @@ function TakeNotes2(props) {
                                                 <IconButton size='large'><PersonAddAltOutlinedIcon /></IconButton>
                                           </Tooltip>
                                           <Tooltip title='Background options' >
-                                                <IconButton size='large'><ColorPopper noteColor={noteColor} /></IconButton>
+                                                <IconButton size='large'><ColorPopper action="create" noteColor={noteColor} /></IconButton>
                                           </Tooltip>
                                           
 

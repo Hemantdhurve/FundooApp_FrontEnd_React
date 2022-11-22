@@ -30,3 +30,16 @@ export const deletenoteAPI=(noteId)=>{
     console.log("Notes Deleted")
     return response;
 }
+
+
+export const updateColorAPI=(input)=>{
+    let response=axios.put(`https://localhost:44395/api/Notes/Color?noteId=${input.noteId}&backgroundcolor=${input.backgroundcolor}`,input,headerConfig)
+    console.log("Color Updated")
+    return response;
+}
+
+export const updatenoteAPI=(noteId)=>{
+    let response= axios.put(`https://localhost:44395/api/Notes/Update?noteId=${noteId}`,noteId,headerConfig)
+    console.log("Notes Updated")
+    return response;
+}

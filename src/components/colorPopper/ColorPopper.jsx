@@ -4,6 +4,7 @@ import Popper from '@mui/material/Popper';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import IconButton from '@mui/material/IconButton';
 import { Tooltip } from '@mui/material';
+import { updateColorAPI } from '../../services/Dataservice';
 
 
 function ColorPopper(props) {
@@ -15,9 +16,24 @@ function ColorPopper(props) {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
 
-  const createColor=(color)=>{
-    props.noteColor(color)
+  const createColor=(colour)=>{
+    
+    if(props.action==="create"){
+      props.noteColor(colour)
+    }
+    else if(props.action==="update"){
+      
+      let input={noteId:props.id,backgroundcolor:colour}
+      console.log(input)
+      updateColorAPI(input)
+      .then((response)=>{console.log(response)
+      props.updateColor()})
+      .catch((error)=> console.log(error))
+      console.log('Color changed')
+    }
   }
+
+
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popper' : undefined;
