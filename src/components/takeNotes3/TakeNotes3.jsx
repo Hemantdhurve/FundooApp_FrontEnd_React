@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './TakeNotes3.css';
-// import InputBase from '@mui/material/InputBase';
 import { Tooltip } from '@mui/material';
 import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
 import IconButton from '@mui/material/IconButton';
@@ -15,7 +14,6 @@ import { deletenoteAPI, getArchievenoteAPI, updatenoteAPI } from '../../services
 import ColorPopper from '../colorPopper/ColorPopper';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
@@ -116,7 +114,6 @@ function TakeNotes3(props) {
                               </Tooltip>
                               <Tooltip title='Background options'>
                                     <IconButton size='small'><ColorPopper action="update" id={props.note.noteId} updateColor={updateColor} /></IconButton>
-                                    {/* <ColorPopper action="update" id={props.note.noteId} updateColor={updateColor} /></IconButton> */}
                               </Tooltip>
                               <Tooltip title='Add image'>
                                     <IconButton size='small'><InsertPhotoOutlinedIcon /></IconButton>
@@ -127,7 +124,6 @@ function TakeNotes3(props) {
                               <Tooltip title='More'>
                                     <IconButton size='small'><MoreVertOutlinedIcon /></IconButton>
                               </Tooltip>
-
                         </div>
                   </div>
 
@@ -135,8 +131,7 @@ function TakeNotes3(props) {
                         open={open}
                         onClose={handleClose}
                         aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
-                  >
+                        aria-describedby="modal-modal-description"                  >
                         <Box sx={style}>
                               <div style={{ backgroundColor: props.note.backgroundcolor,borderRadius:5 }}>
                                     <div className='ttl-des-pin' >

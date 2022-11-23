@@ -38,6 +38,7 @@ export const updateColorAPI=(input)=>{
     return response;
 }
 
+//dataobj is passed to get the data as done in backend
 export const updatenoteAPI=(noteId,dataobj)=>{
     let response= axios.put(`https://localhost:44395/api/Notes/Update?noteId=${noteId}`,dataobj,headerConfig)
     console.log("Notes Update")

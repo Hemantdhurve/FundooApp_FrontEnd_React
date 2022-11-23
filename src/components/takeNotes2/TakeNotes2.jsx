@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import './TakeNotes2.css';
-import InputBase from '@mui/material/InputBase';
 import { Tooltip } from '@mui/material';
 import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
 import IconButton from '@mui/material/IconButton';
 import AddAlertOutlinedIcon from '@mui/icons-material/AddAlertOutlined';
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
-// import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
@@ -47,11 +45,8 @@ function TakeNotes2(props) {
             console.log("created note", createNote)
 
             createNoteAPI(createNote)
-                  .then((response) => {
-                        console.log(response)
-
-                  })
-                  .catch((error) => { console.log(error) })
+            .then((response) => {console.log(response)})
+            .catch((error) => { console.log(error) })
             console.log('Notes Created')
       } 
      
@@ -78,9 +73,7 @@ function TakeNotes2(props) {
                                           </Tooltip>
                                           <Tooltip title='Background options' >
                                                 <IconButton size='large'><ColorPopper action="create" noteColor={noteColor} /></IconButton>
-                                          </Tooltip>
-                                          
-
+                                          </Tooltip>                                         
                                           <Tooltip title='Add image'>
                                                 <IconButton size='large'><InsertPhotoOutlinedIcon /></IconButton>
                                           </Tooltip>

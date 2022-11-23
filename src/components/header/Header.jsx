@@ -1,9 +1,7 @@
 import React from 'react'
 import "../header/Header.css"
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
-import InputBase from '@mui/material/InputBase';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -37,11 +35,8 @@ function Header(props) {
                         </Tooltip>
                     </div>
                     <input className='inner-search' placeholder='Search' />
-                    {/* <div className='inner-search'><InputBase placeholder="Search" /></div> */}
                 </div>
-                <div className='empty-div'></div>
-
-                
+                <div className='empty-div'></div>                
                 <div className='five-icons'>
                     <div className='ref-set-icon'>
                         <Tooltip title='Refresh'>
