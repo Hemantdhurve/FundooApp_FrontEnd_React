@@ -2,7 +2,7 @@
 .full-box3{
     display: flex;
     flex-direction: column;
-    height: 23vh;
+    height: 20vh;
     margin-top: 30px;
     width: 20vw;
     margin-right: 16px;    
@@ -17,7 +17,7 @@
 .titlebox3{
     display: flex;
     flex-direction: column;
-    height: 14vh;
+    height: 13vh;
     width: 100%;
     padding: 5px;
 }

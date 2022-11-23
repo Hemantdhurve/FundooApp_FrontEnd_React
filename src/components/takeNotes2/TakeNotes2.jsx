@@ -60,13 +60,13 @@ function TakeNotes2(props) {
                   <div className='note2-box' >
                         <div className='inner-box' style={{backgroundColor:createNote.backgroundcolor}}>
                               <div className="titlebox1">
-                                    <InputBase className='note-txt2' placeholder="Title" onChange={takeTitle} />
+                                    <input className='note-txt2' placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>
                                           <IconButton size='large'><PushPinOutlinedIcon /></IconButton>
                                     </Tooltip>
                               </div>
                               <div className='description'>
-                                    <InputBase className='note-txt2' type='text' placeholder="Take a note..." onChange={takeDescription} />
+                                    <input className='note-txt2' placeholder="Take a note..." onChange={takeDescription} />
                               </div>
                               <div className='logo-container'>
                                     <div className='logo-note2'>

@@ -12,14 +12,18 @@ import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import { Tooltip } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 
-function Header() {
+function Header(props) {
+
+    const menuOpen=()=>{
+        props.headerPart()
+    }
 
     return (
         <div className='header-box'>
             <div className='inner-header'>
                 <div className='main-menu'>
                     <Tooltip title='Main-menu'>
-                        <IconButton size='large'><MenuIcon size='large'/></IconButton>
+                        <IconButton size='large' onClick={menuOpen}><MenuIcon size='large' /></IconButton>
                     </Tooltip>
                 </div>
                 <div className='keeplogo'>
@@ -32,7 +36,8 @@ function Header() {
                             <IconButton color="inherit"><SearchIcon size='large' /></IconButton>  
                         </Tooltip>
                     </div>
-                    <div className='inner-search'><InputBase placeholder="Search" /></div>
+                    <input className='inner-search' placeholder='Search' />
+                    {/* <div className='inner-search'><InputBase placeholder="Search" /></div> */}
                 </div>
                 <div className='empty-div'></div>
 

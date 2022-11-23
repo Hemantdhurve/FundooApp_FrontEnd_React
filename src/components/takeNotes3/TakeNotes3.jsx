@@ -32,6 +32,7 @@ function TakeNotes3(props) {
             bgcolor: 'background.paper',
             border: 'none',
             boxShadow: 30,
+            outline:'none',
             // p: 7.5,
             borderRadius: 2,
             flexWrap: 'wrap',
@@ -82,7 +83,7 @@ function TakeNotes3(props) {
       const closebtn = (modId) => {
             console.log(modId)
             setOpen(false)
-            updatenoteAPI(modId)
+            updatenoteAPI(modId,modstate)
                   .then((response) => console.log(response))
                   .catch((error) => console.log(error))
             console.log("updated note")

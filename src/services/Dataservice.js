@@ -38,8 +38,8 @@ export const updateColorAPI=(input)=>{
     return response;
 }
 
-export const updatenoteAPI=(noteId)=>{
-    let response= axios.put(`https://localhost:44395/api/Notes/Update?noteId=${noteId}`,noteId,headerConfig)
-    console.log("Notes Updated")
+export const updatenoteAPI=(noteId,dataobj)=>{
+    let response= axios.put(`https://localhost:44395/api/Notes/Update?noteId=${noteId}`,dataobj,headerConfig)
+    console.log("Notes Update")
     return response;
 }
