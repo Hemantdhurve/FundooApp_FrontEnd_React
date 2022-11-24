@@ -4,8 +4,7 @@ body{
 
 .header-box{
     display: flex;
-    flex-direction: row;
-    width:98.7vw;
+    width:100vw;
     border-bottom: 1px solid rgb(199, 194, 194);
     align-items: center;
     background-color: #fff;
@@ -18,31 +17,33 @@ body{
     align-items: center;
 }
 .main-menu{
-    width: 4%;
+    /* width: 4%; */
     align-items: center;
     padding-left: 10px;
 }
 
 .keeplogo{
-    width: 14%;
+    width: 14vw;
     height: 9vh;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 .keepimg{
-    height: 8vh;
-    width: 25%;
+    height: 6vh;
+    width: 3vw;
+   
 }
 .keep-txt{  
     font-size: 20px;
-    font-weight:400;
+    font-weight:500;
     color:rgb(116, 114, 114);
     align-items: center;
     text-decoration: none;
+    margin-left: 10px;
 }
 .searchBar{
-    width: 50%;
+    width: 50vw;
     display: flex;
     border-color: black;
     box-shadow: 2px 2px 2px #e0e0e0;
@@ -55,7 +56,6 @@ body{
 
 .icon-search{
     padding: 4px;
-    width: 4vw;
 }
 .inner-search{
     width: 88%;
@@ -68,13 +68,13 @@ body{
     
 }
 .empty-div{
-    width:14% ;
+    width:14vw;
 }
 .five-icons{
     display: flex;
     align-items: center;
     height: 74%;
-    width: 18%;
+    width: 18vw;
     justify-content: space-between;
 }
 .ref-set-icon{

@@ -11,6 +11,7 @@ function Dashboard() {
     const [toggle, setToggle]= useState(false)
     const [notesArray,setNotesArray]= useState([])
     const [headerState,setHeaderState]=useState(false)
+    const [drawerState,setDrawerState]=useState('Notes')
   
     const openTakeNote2=()=>{
         setToggle(true)
@@ -20,11 +21,38 @@ function Dashboard() {
     }
      const getNote=()=>{
         getAllNoteAPI()
-        .then((response)=>{console.log(response)
-            setNotesArray(response.data.data)
+        .then((response)=>{
+            let filterNotes=[]
+            if(drawerState==='Notes'){
+                filterNotes=response.data.data.filter((notes)=>{
+                    if(notes.archieve===false && notes.trash===false)
+                    {
+                        return notes
+                    }
+                })
+            }
+            if(drawerState==='Archive'){
+                filterNotes=response.data.data.filter((notes)=>{
+                    if(notes.archieve===true && notes.trash===false)
+                    {
+                        return notes
+                    }
+                })
+            }
+            if(drawerState==='Bin'){
+                filterNotes=response.data.data.filter((notes)=>{
+                    if(notes.archieve===false && notes.trash===true)
+                    {
+                        return notes
+                    }
+                })
+            }
+            
+            console.log(response)
+            setNotesArray(filterNotes)
         })
         .catch((error)=>{console.log(error)})
-        console.log('Notes List ')
+        console.log('Getting Notes List ')
      }
      const autoRefresh=()=>{
         getNote()
@@ -32,21 +60,25 @@ function Dashboard() {
 
     useEffect(()=>{
         getNote()       
-    },[])
+    },[drawerState])
 
     const headerPart=()=>{
         setHeaderState(!headerState)
+    }
+
+    const listenDrawer=(drawobj)=>{
+        setDrawerState(drawobj)
     }
   
     return (
     <div>
         <Header  headerPart={headerPart}/>
-        <Drawer1 headerState={headerState}/>
+        <Drawer1 headerState={headerState} listenDrawer={listenDrawer} />
         <div>
             {
                 toggle ? <TakeNotes2 closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
             }
-            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'240px'}}>
+            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'270px'}}>
                 {
                     notesArray.map((note)=>(<TakeNotes3 note={note} autoRefresh={autoRefresh} />))
                 }

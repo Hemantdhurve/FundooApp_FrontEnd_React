@@ -18,9 +18,8 @@ function TakeNotes2(props) {
       const [createNote, setCreateNote] = useState({
             title: '',
             description: '',
-            archieve:false,
+            archieve: false,
             backgroundcolor:'',
-            archieve: false, 
             trash: false, 
             pin: false
 
@@ -33,6 +32,7 @@ function TakeNotes2(props) {
       }
       const noteArchieve=()=>{
             setCreateNote(prevState=> ({...prevState, archieve: true}))
+            console.log("Archieve on TakeNote2 successful")
       }
 
       const noteColor=(bgColor)=>{
@@ -46,7 +46,7 @@ function TakeNotes2(props) {
 
             createNoteAPI(createNote)
             .then((response) => {console.log(response)})
-            .catch((error) => { console.log(error) })
+            .catch((error) => { console.log(error)})
             console.log('Notes Created')
       } 
      
@@ -54,14 +54,14 @@ function TakeNotes2(props) {
             <div>
                   <div className='note2-box' >
                         <div className='inner-box' style={{backgroundColor:createNote.backgroundcolor}}>
-                              <div className="titlebox1">
-                                    <input className='note-txt2' placeholder="Title" onChange={takeTitle} />
+                              <div className="titlebox1" >
+                                    <input className='note-txt2'style={{backgroundColor:createNote.backgroundcolor}} placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>
                                           <IconButton size='large'><PushPinOutlinedIcon /></IconButton>
                                     </Tooltip>
                               </div>
                               <div className='description'>
-                                    <input className='note-txt2' placeholder="Take a note..." onChange={takeDescription} />
+                                    <input className='note-txt2' style={{backgroundColor:createNote.backgroundcolor}} placeholder="Take a note..." onChange={takeDescription} />
                               </div>
                               <div className='logo-container'>
                                     <div className='logo-note2'>

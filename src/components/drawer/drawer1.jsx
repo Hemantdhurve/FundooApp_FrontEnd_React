@@ -63,13 +63,18 @@ function Drawer1(props) {
     setOpen(false);
   };
 
+  const chooseNotes=(getValues)=>{
+    props.listenDrawer(getValues)
+   
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <Drawer variant="permanent" open={props.headerState}>
 
         <List>
-          <ListItem disablePadding sx={{ display: 'block'}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Notes')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <LightbulbOutlinedIcon />
@@ -78,7 +83,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding sx={{ display: 'block'}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Remainder')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <NotificationsOutlinedIcon />
@@ -87,7 +92,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding sx={{ display: 'block'}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Edit')} sx={{ display: 'flex', "&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <EditOutlinedIcon />
@@ -96,7 +101,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding sx={{ display: 'block'}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Archive')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <ArchiveOutlinedIcon />
@@ -105,7 +110,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding sx={{ display: 'block'}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Bin')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <DeleteOutlinedIcon />
