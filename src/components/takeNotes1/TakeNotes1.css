@@ -3,14 +3,14 @@
     flex-direction: row;
     border-color: black;
     height: 40%;
-    /* margin-top: 30px; */
-    margin-top: -5vh;
+    margin-top: -30px;
+    /* margin-top: -5vh; */
     justify-content: center;
 }
 .inner-notebox{
     display: flex;
     flex-direction: row;
-    width: 45%;
+    width: 47vw;
     border: 1px solid rgb(199, 194, 194);  
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     border-radius: 8px;
@@ -18,7 +18,7 @@
     
 }
 .note-txt{
-    width: 70%;
+    width: 75%;
     padding-left: 10px;
     color: rgb(187, 185, 185);
 }

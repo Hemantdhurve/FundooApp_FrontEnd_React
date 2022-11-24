@@ -10,7 +10,7 @@
 .inner-box{
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 47vw;
     border: 1px solid #e0e0e0;
     box-sizing: border-box;
     border-radius: 8px;
@@ -22,13 +22,13 @@
     flex-direction: row;
     height: 32%;
     justify-content: space-between;
-    width: 98%;
+    width: 46vw;
 }
 .note-txt2{      
     padding-inline-start: 2%;
     outline: none;
     border: none;
-    width: 100%;
+    width: 43.5vw;
     font-size: medium;
     height: 7vh;
     border-radius: 8px;
@@ -46,5 +46,5 @@
     justify-content: space-between; 
     align-items: center; 
     height: 33%;
-    width: 95%;
+    width: 45vw;
 }

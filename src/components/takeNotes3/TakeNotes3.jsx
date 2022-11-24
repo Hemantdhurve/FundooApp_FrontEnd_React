@@ -112,7 +112,7 @@ function TakeNotes3(props) {
                               <Tooltip title='Delete' onClick={() => deleteNote(props.note.noteId)} >
                                     <IconButton size='small' ><DeleteOutlineOutlinedIcon /></IconButton>
                               </Tooltip>
-                              <Tooltip title='Background options'>
+                              <Tooltip >
                                     <IconButton size='small'><ColorPopper action="update" id={props.note.noteId} updateColor={updateColor} /></IconButton>
                               </Tooltip>
                               <Tooltip title='Add image'>

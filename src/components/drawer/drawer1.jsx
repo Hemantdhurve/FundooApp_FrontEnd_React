@@ -17,15 +17,14 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 const drawerWidth = 260;
 
 const openedMixin = (theme) => ({
-      width: drawerWidth, 
-      marginTop: '9.5vh',
+      width: drawerWidth,
+      marginTop: '9.5vh', 
       boxShadow: '0px 0px 5px grey',
       borderTop:'0px solid white',
       transition: theme.transitions.create('width', {
          easing: theme.transitions.easing.sharp,
          duration: theme.transitions.duration.enteringScreen,
       }),
-      overflowX: 'hidden',
 });
 
 const closedMixin = (theme) => ({
@@ -35,7 +34,6 @@ const closedMixin = (theme) => ({
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      overflowX: 'hidden',
       width: `calc(${theme.spacing(2)} + 0px)`,[theme.breakpoints.up('sm')]: {width: `calc(${theme.spacing(8)} + 1px)`,},
 });
 
@@ -74,7 +72,7 @@ function Drawer1(props) {
       <Drawer variant="permanent" open={props.headerState}>
 
         <List>
-          <ListItem disablePadding onClick={()=>chooseNotes('Notes')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Notes')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'#feefc3'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <LightbulbOutlinedIcon />
@@ -83,7 +81,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding onClick={()=>chooseNotes('Remainder')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Remainder')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'#feefc3'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <NotificationsOutlinedIcon />
@@ -92,7 +90,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding onClick={()=>chooseNotes('Edit')} sx={{ display: 'flex', "&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Edit')} sx={{ display: 'flex', "&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'#feefc3'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <EditOutlinedIcon />
@@ -101,7 +99,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding onClick={()=>chooseNotes('Archive')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Archive')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'#feefc3'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <ArchiveOutlinedIcon />
@@ -110,7 +108,7 @@ function Drawer1(props) {
             </ListItemButton>
           </ListItem>
 
-          <ListItem disablePadding onClick={()=>chooseNotes('Bin')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'orange'}}}>
+          <ListItem disablePadding onClick={()=>chooseNotes('Bin')} sx={{ display: 'flex',"&:hover":{borderRadius:'0px 25px 25px 0px',backgroundColor:'#feefc3'}}}>
             <ListItemButton style={{paddingLeft:10,height:50}}>
               <IconButton size='large' style={{marginRight:15}}>
                 <DeleteOutlinedIcon />
