@@ -9,6 +9,7 @@ import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import { Tooltip } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
+import { connect } from 'react-redux';
 
 function Header(props) {
 
@@ -26,7 +27,7 @@ function Header(props) {
                 </div>
                 <div className='keeplogo'>
                     <img className='keepimg' src='./assets/keep.png' alt="Signup Logo"/>
-                    <a className='keep-txt' href=''>Keep</a>
+                    <a className='keep-txt' href=''>{props.label}</a>
                 </div>
                 <div className='searchBar'>
                     <div className='icon-search'>
@@ -62,4 +63,8 @@ function Header(props) {
         </div >
     )
 }
-export default Header;
+
+const mapStateToProps=(state)=>{
+ return { label:state.drawerReducer.label}   
+}
+export default connect(mapStateToProps)(Header)

@@ -13,6 +13,7 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import { connect } from 'react-redux';
 
 const drawerWidth = 260;
 
@@ -63,6 +64,9 @@ function Drawer1(props) {
 
   const chooseNotes=(getValues)=>{
     props.listenDrawer(getValues)
+    props.dispatch({
+      type:`${getValues}`
+    })
    
   }
 
@@ -121,4 +125,4 @@ function Drawer1(props) {
     </Box>
   );
 }
-export default Drawer1;
+export default connect()(Drawer1)

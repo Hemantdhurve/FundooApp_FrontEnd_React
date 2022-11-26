@@ -40,7 +40,8 @@ function TakeNotes3(props) {
       const [modstate, setModState] = useState({
             noteId: '',
             title: '',
-            description: ''
+            description: '',
+            backgroundcolor:''
       })
       const handleOpen = (modalobj) => {
             setOpen(true);
@@ -48,7 +49,8 @@ function TakeNotes3(props) {
             setModState({
                   noteId: modalobj.noteId,
                   title: modalobj.title,
-                  description: modalobj.description
+                  description: modalobj.description,
+                  backgroundcolor:modalobj.backgroundcolor
             })
 
       }

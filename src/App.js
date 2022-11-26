@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux';
 import './App.css';
 // import SignIn from './pages/Sign-In/SignIn';
 // import SignUp from './pages/Sign-Up/SignUp';
@@ -6,7 +7,7 @@ import TakeNotes1 from './components/takeNotes1/TakeNotes1';
 import TakeNotes2 from './components/takeNotes2/TakeNotes2';
 // import TakeNotes3 from './components/takeNotes3/TakeNotes3';
 import Dashboard from './pages/dashboard/Dashboard';
-
+import store from './components/redux/store'
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
       {/* <TakeNotes1 /> */}
       {/* <TakeNotes2 /> */}
       {/* <TakeNotes3 /> */}
-      <Dashboard />
+      
+      <Provider store={store}>
+          <Dashboard />
+      </Provider>
       </div>
   );
 }
