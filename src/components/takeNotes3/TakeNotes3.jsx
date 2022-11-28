@@ -18,6 +18,7 @@ import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
+import Paper from '@mui/material/Paper';
 
 function TakeNotes3(props) {
       //For the Popup modal
@@ -91,20 +92,20 @@ function TakeNotes3(props) {
 
 
       return (
-            <div>
-                  <div className='full-box3' style={{ backgroundColor: props.note.backgroundcolor }}>
-                        <div className='title-dec-pin'>
-                              <div className="titlebox3" >
+            <Box>
+                  <Paper className='full-box3' elevation={4} style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
+                        <Box className='title-dec-pin'>
+                              <Box className="titlebox3" >
                                     <span className='note-title' onClick={() => handleOpen(props.note)}>{props.note.title}</span>
                                     <span className='note-desc' onClick={() => handleOpen(props.note)}>{props.note.description}</span>
-                              </div>
-                              <div className='pintk3'>
+                              </Box>
+                              <Box className='pintk3'>
                                     <Tooltip title='Pin note'>
                                           <IconButton size='small' ><PushPinOutlinedIcon /></IconButton>
                                     </Tooltip>
-                              </div>
-                        </div>
-                        <div className='logo-container3'>
+                              </Box>
+                        </Box>
+                        <Box className='logo-container3'>
                               <Tooltip title='Remind me'>
                                     <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
                               </Tooltip>
@@ -126,8 +127,8 @@ function TakeNotes3(props) {
                               <Tooltip title='More'>
                                     <IconButton size='small'><MoreVertOutlinedIcon /></IconButton>
                               </Tooltip>
-                        </div>
-                  </div>
+                        </Box>
+                  </Paper>
 
                   <Modal
                         open={open}
@@ -135,20 +136,20 @@ function TakeNotes3(props) {
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"                  >
                         <Box sx={style}>
-                              <div style={{ backgroundColor: props.note.backgroundcolor,borderRadius:5 }}>
-                                    <div className='ttl-des-pin' >
-                                          <div className='inp-div'>
+                              <Box style={{ backgroundColor: props.note.backgroundcolor,borderRadius:5 }}>
+                                    <Box className='ttl-des-pin' >
+                                          <Box className='inp-div'>
                                                 <InputBase className='note-titlemod' defaultValue={modstate.title} onChange={takeTitle} />
                                                 <InputBase className='note-descmod' type='text' defaultValue={modstate.description} onChange={takeDescription} />
-                                          </div>
-                                          <div className='pin-btnmod'>
+                                          </Box>
+                                          <Box className='pin-btnmod'>
                                                 <Tooltip title='Pin note'>
                                                       <IconButton size='small'><PushPinOutlinedIcon /></IconButton>
                                                 </Tooltip>
-                                          </div>
-                                    </div>
-                                    <div className='all-icon'>
-                                          <div className='group-btnmod'>
+                                          </Box>
+                                    </Box>
+                                    <Box className='all-icon'>
+                                          <Box className='group-btnmod'>
                                                 <Tooltip title='Remind me'>
                                                       <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
                                                 </Tooltip>
@@ -173,15 +174,15 @@ function TakeNotes3(props) {
                                                 <Tooltip title='Redo'>
                                                       <IconButton size='small'><RedoOutlinedIcon /></IconButton>
                                                 </Tooltip>
-                                          </div>
-                                          <div className='close-btnmod'>
+                                          </Box>
+                                          <Box className='close-btnmod'>
                                                 <Button onClick={() => closebtn(modstate.noteId)} variant="text" color='inherit'>Close </Button>
-                                          </div>
-                                    </div>
-                              </div>
+                                          </Box>
+                                    </Box>
+                              </Box>
                         </Box>
                   </Modal>
-            </div>
+            </Box>
       )
 }
 

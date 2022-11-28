@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     border-color: black;
-    width: 100vw;
+    width: 100%;
     margin-top: -30px;
     justify-content: center;
 }
@@ -10,9 +10,8 @@
 .inner-box{
     display: flex;
     flex-direction: column;
-    width: 46vw;
+    width: 44vw;
     border: 1px solid #e0e0e0;
-    box-sizing: border-box;
     border-radius: 8px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     
@@ -22,13 +21,13 @@
     flex-direction: row;
     height: 32%;
     justify-content: space-between;
-    width: 46vw;
+    width: 43.2vw;
 }
 .note-txt2{      
     padding-inline-start: 2%;
     outline: none;
     border: none;
-    width: 43.5vw;
+    width: 42vw;
     font-size: medium;
     height: 7vh;
     border-radius: 8px;
@@ -46,5 +45,5 @@
     justify-content: space-between; 
     align-items: center; 
     height: 33%;
-    width: 45vw;
+    width: 42vw;
 }

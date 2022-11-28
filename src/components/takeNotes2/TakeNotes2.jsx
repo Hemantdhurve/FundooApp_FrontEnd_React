@@ -13,6 +13,8 @@ import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 import Button from '@mui/material/Button';
 import { createNoteAPI } from '../../services/Dataservice'
 import ColorPopper from '../colorPopper/ColorPopper';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 
 function TakeNotes2(props) {
       const [createNote, setCreateNote] = useState({
@@ -51,20 +53,20 @@ function TakeNotes2(props) {
       } 
      
       return (
-            <div>
-                  <div className='note2-box' >
-                        <div className='inner-box' style={{backgroundColor:createNote.backgroundcolor}}>
-                              <div className="titlebox1" >
+            <Box>
+                  <Box className='note2-box'>
+                        <Card className='inner-box' style={{backgroundColor:createNote.backgroundcolor}} elevation={3}>
+                              <Box className="titlebox1" >
                                     <input className='note-txt2'style={{backgroundColor:createNote.backgroundcolor}} placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>
                                           <IconButton size='large'><PushPinOutlinedIcon /></IconButton>
                                     </Tooltip>
-                              </div>
-                              <div className='description'>
+                              </Box>
+                              <Box className='description'>
                                     <input className='note-txt2' style={{backgroundColor:createNote.backgroundcolor}} placeholder="Take a note..." onChange={takeDescription} />
-                              </div>
-                              <div className='logo-container'>
-                                    <div className='logo-note2'>
+                              </Box>
+                              <Box className='logo-container'>
+                                    <Box className='logo-note2'>
                                           <Tooltip title='Remind me'>
                                                 <IconButton size='large'><AddAlertOutlinedIcon /></IconButton>
                                           </Tooltip>
@@ -89,14 +91,14 @@ function TakeNotes2(props) {
                                           <Tooltip title='Redo'>
                                                 <IconButton size='large'><RedoOutlinedIcon /></IconButton>
                                           </Tooltip>
-                                    </div>
-                                    <div>
+                                    </Box>
+                                    <Box>
                                           <Button variant="text" color='inherit' onClick={closeButton} >Close</Button>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
+                                    </Box>
+                              </Box>
+                        </Card>
+                  </Box>
+            </Box>
       )
 }
 

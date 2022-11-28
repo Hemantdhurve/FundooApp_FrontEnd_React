@@ -26,7 +26,7 @@ function Header(props) {
                     </Tooltip>
                 </div>
                 <div className='keeplogo'>
-                    <img className='keepimg' src='./assets/keep.png' alt="Signup Logo"/>
+                    <img className='keepimg' src='./assets/keep.png' />
                     <a className='keep-txt' href=''>{props.label}</a>
                 </div>
                 <div className='searchBar'>

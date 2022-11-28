@@ -5,19 +5,21 @@ import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import BrushIcon from '@mui/icons-material/Brush';
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import { Tooltip, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 
 function TakeNotes1(props) {
 
   //to open take note 2 when pressing close button onClick
-  const openNote=()=>{
+  const openNote = () => {
     props.openTakeNote2()
   }
   return (
-    <div >
-      <div className='note-box' >
-        <div className="inner-notebox" onClick={openNote}>
-          <Typography className='note-txt' >Take a Note...</Typography> 
-          <div className='btn'>
+    <Box >
+      <Box className='note-box' >
+        <Card className="inner-notebox" onClick={openNote}>
+          <Typography className='note-txt' >Take a Note...</Typography>
+          <Box className='btn'>
             <Tooltip title='New List'>
               <IconButton size='large'><CheckBoxOutlinedIcon /></IconButton>
             </Tooltip>
@@ -27,10 +29,10 @@ function TakeNotes1(props) {
             <Tooltip title='New note with image'>
               <IconButton size='large'><ImageOutlinedIcon /></IconButton>
             </Tooltip>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Card>
+      </Box>
+    </Box>
   )
 }
 
