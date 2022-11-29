@@ -3,6 +3,7 @@ import './SignIn.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { logInApi } from '../../services/UserService';
+import { useNavigate } from 'react-router-dom';
 
 
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
@@ -28,6 +29,10 @@ function SignIn()
       console.log( event.target.value)
       setlogInstate((prevState)=>({...prevState,password: event.target.value}))
     }
+
+    //Navigate to dashboard
+    const navigateSignIn=useNavigate()
+
     const logInSuccess=(event)=>
     {
           console.log(logInstate)
@@ -66,7 +71,8 @@ function SignIn()
         logInApi(logInstate)
         .then((response)=>{console.log(response)
         localStorage.setItem("token",response.data.data)
-        })
+        navigateSignIn('/dashboard')
+      })
         .catch((error)=>{console.log(error)})
         console.log('Login Successful')
       }
@@ -95,7 +101,7 @@ function SignIn()
           </div>
         </div>
         <div className='acc'>
-        <Button variant="text">Create Account</Button>
+        <Button variant="text" >Create Account</Button>
         </div>
         
         </form>

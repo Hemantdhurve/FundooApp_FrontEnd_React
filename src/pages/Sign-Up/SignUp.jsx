@@ -52,7 +52,6 @@ function SignUp()
         console.log( event.target.value)
         setsignUpState((prevState)=>({...prevState,confirmPassword: event.target.value}))
     }
-   
 
     const signUpSuccess=()=>
     {

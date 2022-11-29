@@ -9,6 +9,7 @@ import TakeNotes3 from './components/takeNotes3/TakeNotes3';
 import Dashboard from './pages/dashboard/Dashboard';
 import store from './components/redux/store'
 import HeaderMui from './components/header/HeaderMui';
+import Router1 from './pages/router/router';
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
       {/* <TakeNotes3 /> */}
       
       <Provider store={store}>
-          <Dashboard />
-      </Provider>
+          {/* <Dashboard /> */}
+          <Router1 />
+      </Provider> 
       </div>
   );
 }

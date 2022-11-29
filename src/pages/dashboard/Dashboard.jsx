@@ -5,6 +5,7 @@ import TakeNotes1 from '../../components/takeNotes1/TakeNotes1'
 import { getAllNoteAPI } from '../../services/Dataservice'
 import TakeNotes3 from '../../components/takeNotes3/TakeNotes3'
 import Drawer1 from '../../components/drawer/drawer1'
+import HeaderMui from '../../components/header/HeaderMui'
 
 
 function Dashboard() {
@@ -72,13 +73,15 @@ function Dashboard() {
   
     return (
     <div>
-        <Header  headerPart={headerPart}/>
+        {/* <Header headerPart={headerPart}/> */}
+        <HeaderMui headerPart={headerPart}/>
+
         <Drawer1 headerState={headerState} listenDrawer={listenDrawer} />
         <div>
             {
                 toggle ? <TakeNotes2 closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
             }
-            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'270px'}}>
+            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'270px',boxSizing:'border-box'}}>
                 {
                     notesArray.map((note)=>(<TakeNotes3 note={note} autoRefresh={autoRefresh} />))
                 }

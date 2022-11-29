@@ -7,8 +7,23 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import { Tooltip, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import { makeStyles } from '@mui/styles'
 
+const useStyle = makeStyles({
+  noteBox:{
+    display: 'flex',
+    flexDirection: 'row',
+    borderColor: 'black',
+    height: '40%',
+    marginTop: '-30px',
+    justifyContent: 'center',
+
+  }
+  // ['']:{}
+
+})
 function TakeNotes1(props) {
+const classes=useStyle()
 
   //to open take note 2 when pressing close button onClick
   const openNote = () => {
@@ -16,7 +31,7 @@ function TakeNotes1(props) {
   }
   return (
     <Box >
-      <Box className='note-box' >
+      <Box className={classes.noteBox} >
         <Card className="inner-notebox" onClick={openNote}>
           <Typography className='note-txt' >Take a Note...</Typography>
           <Box className='btn'>

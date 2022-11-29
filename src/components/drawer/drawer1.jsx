@@ -19,7 +19,7 @@ const drawerWidth = 260;
 
 const openedMixin = (theme) => ({
       width: drawerWidth,
-      marginTop: '9.5vh', 
+      marginTop: '10vh', 
       boxShadow: '0px 0px 5px grey',
       borderTop:'0px solid white',
       transition: theme.transitions.create('width', {
@@ -30,7 +30,7 @@ const openedMixin = (theme) => ({
 
 const closedMixin = (theme) => ({
       border:'0px solid white',
-      marginTop: '9.5vh',
+      marginTop: '10vh',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
