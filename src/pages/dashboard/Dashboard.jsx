@@ -74,14 +74,14 @@ function Dashboard() {
     return (
     <div>
         {/* <Header headerPart={headerPart}/> */}
-        <HeaderMui headerPart={headerPart}/>
+        <HeaderMui headerPart={headerPart} />
 
         <Drawer1 headerState={headerState} listenDrawer={listenDrawer} />
         <div>
             {
                 toggle ? <TakeNotes2 closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
             }
-            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'270px',boxSizing:'border-box'}}>
+            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'280px'}}>
                 {
                     notesArray.map((note)=>(<TakeNotes3 note={note} autoRefresh={autoRefresh} />))
                 }

@@ -1,32 +1,32 @@
 .note-box {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     border-color: black;
     height: 40%;
     margin-top: -30px;
-    /* margin-top: -5vh; */
-    justify-content: center;
+     margin-top: -5vh; 
+    justify-content: center; */
 }
 .inner-notebox{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     width: 44vw;
     border: 1px solid rgb(199, 194, 194);  
     box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     border-radius: 8px;
-    align-items: center;
+    align-items: center; */
     
 }
 .note-txt{
-    width: 75%;
+    /* width: 75%;
     padding-left: 10px;
-    color: rgb(187, 185, 185);
+    color: rgb(187, 185, 185); */
 }
 
 .btn{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     width: 95%;
     margin-left: 56%;
-    position: relative;
+    position: relative; */
 }

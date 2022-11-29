@@ -19,12 +19,99 @@ import InputBase from '@mui/material/InputBase';
 import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 import Paper from '@mui/material/Paper';
+import { makeStyles } from '@mui/styles';
+
+const useStyle=makeStyles({
+      fullBox3:{
+            display: 'flex',
+            flexDirection: 'column',
+            height: '22vh',
+            marginTop: '30px',
+            width: '18vw',
+            marginRight: '30px',    
+            borderRadius: '8px',
+      },
+      titleDecPin:{
+            display: 'flex',
+            flexDirection: 'row',
+      },
+      titleBox3:{
+            display: 'flex',
+            flexDirection: 'column',
+            height: '15vh',
+            width: '50vw',
+            padding: '5px',
+      },
+      pinTk3:{
+            padding: '10px',
+      },
+      noteTitle:{
+            height: '5vh',
+            paddingLeft: '10px',
+            justifyContent: 'center',
+            paddingTop: '10px',
+            marginBottom: '10px',
+            fontSize: 'large',
+            fontWeight: '500',
+      },
+      noteDesc:{
+            height: '5vh',
+            paddingLeft: '10px',
+            justifyContent: 'center',
+            paddingTop: '10px',
+            fontWeight: '500',
+      },
+      logoContainer3:{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            padding: '4px', 
+      },
+
+      //Css For Modal
+     
+      ttlDesPin:{
+            display: 'flex',
+            flexDirection: 'row',
+      },
+      inpDiv:{
+            display: 'flex',
+            flexDirection: 'column',
+            height: '16vh',
+            padding: '15px 15px',
+            width: '100%',
+      },
+      pinBtnmod:{
+            paddingTop: '13px',
+            paddingRight: '10px',
+      },
+      noteTitlemod:{
+            marginBottom: '18px',
+      },
+      allIcon:{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+      },
+      groupBtnmod:{
+            display: 'flex',
+            padding: '5px',
+            width: '65%',
+            justifyContent: 'space-between',  
+      },
+      closeBtnmod:{
+            marginRight: '25px',
+      },
+})
 
 function TakeNotes3(props) {
+      const classes=useStyle()
+
       //For the Popup modal
       const style = {
             position: 'absolute',
-            top: '38%',
+            top: '35%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             width: 650,
@@ -93,19 +180,19 @@ function TakeNotes3(props) {
 
       return (
             <Box>
-                  <Paper className='full-box3' elevation={4} style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
-                        <Box className='title-dec-pin'>
-                              <Box className="titlebox3" >
-                                    <span className='note-title' onClick={() => handleOpen(props.note)}>{props.note.title}</span>
-                                    <span className='note-desc' onClick={() => handleOpen(props.note)}>{props.note.description}</span>
+                  <Paper className={classes.fullBox3} elevation={4} style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
+                        <Box className={classes.titleDecPin}>
+                              <Box className={classes.titleBox3} >
+                                    <span className={classes.noteTitle} onClick={() => handleOpen(props.note)}>{props.note.title}</span>
+                                    <span className={classes.noteDesc} onClick={() => handleOpen(props.note)}>{props.note.description}</span>
                               </Box>
-                              <Box className='pintk3'>
+                              <Box className={classes.pinTk3}>
                                     <Tooltip title='Pin note'>
                                           <IconButton size='small' ><PushPinOutlinedIcon /></IconButton>
                                     </Tooltip>
                               </Box>
                         </Box>
-                        <Box className='logo-container3'>
+                        <Box className={classes.logoContainer3}>
                               <Tooltip title='Remind me'>
                                     <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
                               </Tooltip>
@@ -136,20 +223,20 @@ function TakeNotes3(props) {
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"                  >
                         <Box sx={style}>
-                              <Box style={{ backgroundColor: props.note.backgroundcolor,borderRadius:5 }}>
-                                    <Box className='ttl-des-pin' >
-                                          <Box className='inp-div'>
-                                                <InputBase className='note-titlemod' defaultValue={modstate.title} onChange={takeTitle} />
-                                                <InputBase className='note-descmod' type='text' defaultValue={modstate.description} onChange={takeDescription} />
+                              <Box style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
+                                    <Box className={classes.ttlDesPin} >
+                                          <Box className={classes.inpDiv}>
+                                                <InputBase className={classes.noteTitlemod} defaultValue={modstate.title} onChange={takeTitle} />
+                                                <InputBase type='text' defaultValue={modstate.description} onChange={takeDescription} />
                                           </Box>
-                                          <Box className='pin-btnmod'>
+                                          <Box className={classes.pinBtnmod}>
                                                 <Tooltip title='Pin note'>
                                                       <IconButton size='small'><PushPinOutlinedIcon /></IconButton>
                                                 </Tooltip>
                                           </Box>
                                     </Box>
-                                    <Box className='all-icon'>
-                                          <Box className='group-btnmod'>
+                                    <Box className={classes.allIcon}>
+                                          <Box className={classes.groupBtnmod}>
                                                 <Tooltip title='Remind me'>
                                                       <IconButton size='small'><AddAlertOutlinedIcon /></IconButton>
                                                 </Tooltip>
@@ -175,7 +262,7 @@ function TakeNotes3(props) {
                                                       <IconButton size='small'><RedoOutlinedIcon /></IconButton>
                                                 </Tooltip>
                                           </Box>
-                                          <Box className='close-btnmod'>
+                                          <Box className={classes.closeBtnmod}>
                                                 <Button onClick={() => closebtn(modstate.noteId)} variant="text" color='inherit'>Close </Button>
                                           </Box>
                                     </Box>

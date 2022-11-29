@@ -19,6 +19,7 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AppsIcon from '@mui/icons-material/Apps';
+import { connect } from 'react-redux';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -55,12 +56,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-            width: '40ch',
+            width: '45ch',
         },
     },
 }));
 
-function HeaderMui() {
+function HeaderMui(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -83,6 +84,10 @@ function HeaderMui() {
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);
     };
+
+    const menuOpen=()=>{
+        props.headerPart()
+    }
 
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
@@ -174,15 +179,14 @@ function HeaderMui() {
     );
 
     return (
-        <Box sx={{ flexGrow: 1,width:'100vw'}}>
+        <Box sx={{ flexGrow: 1,width:'100vw'}} >
             <AppBar position="static" elevation={1} sx={{backgroundColor: '#ffffff',color:'rgb(53, 50, 50)'}}>
                 <Toolbar>
-                    <IconButton
+                    <IconButton onClick={menuOpen}
                         size="large"
                         edge="start"
                         color="inherit"
-                        aria-label="open drawer"
-                        
+                        aria-label="open drawer"                        
                     >
                         <MenuIcon />
                     </IconButton>
@@ -196,7 +200,7 @@ function HeaderMui() {
                             <Box style={{width:50}}>
                                 <img src='./assets/keep.png' style={{ width: 43, height: 43, marginTop: '5px' }} />
                             </Box>
-                            Keep
+                            {props.label}
                         </Box>
                     </Typography>
                     <Search sx={{ flexGrow: 1,backgroundColor: 'rgb(240, 243, 245)'}}>
@@ -211,7 +215,7 @@ function HeaderMui() {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: {  xs: 'none', md: 'flex' }}}>
-                            <Box>
+                            <Box style={{width:'14vw'}}>
                                 <IconButton size="large">
                                     <Badge color="error">
                                         <RefreshIcon />
@@ -230,8 +234,7 @@ function HeaderMui() {
                                         <SettingsIcon />
                                     </Badge>
                                 </IconButton>
-                                <IconButton>
-                                    
+                                <IconButton >                                    
                                 </IconButton>
                             </Box>
                             <Box>
@@ -252,7 +255,7 @@ function HeaderMui() {
                                     <AccountCircle />
                                 </IconButton>
                              </Box>
-                    </Box>
+                        </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -272,4 +275,7 @@ function HeaderMui() {
         </Box>
     );
 }
-export default HeaderMui;
+const mapStateToProps=(state)=>{
+    return { label:state.drawerReducer.label}   
+}
+export default connect(mapStateToProps)(HeaderMui);

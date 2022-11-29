@@ -2,7 +2,6 @@
   body {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding-top: 60px;
     margin-top: 60px;
     position: relative;
@@ -12,13 +11,7 @@
   .log{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    border-radius: 02%;
-    border: 1px solid rgb(230 230 230);
-    box-shadow: 1px 1px 2px #999595;
+    border-radius: 5px;
     height: 470px;
     width: 500px;
   }
@@ -36,9 +29,7 @@
 
   }
   .inp input{
-        width: 410px;
-    padding-top: 16px;
-    padding-bottom: 16px; 
+    width: 410px; 
   } 
   .txt{
     padding-left: 30px;
@@ -46,11 +37,7 @@
   }
   .forgot-btn{
     justify-content: space-around;
-    margin-right: 320px;
-    left: 30px;
-    margin-left: 24px;
-    width: 230px;
-    
+    margin-left: 24px;    
   }
   .login-btn{
     color: white;
@@ -72,6 +59,5 @@
   }
   .acc{
     margin-top: -35px;
-    margin-right: 320px;
     padding-left: 25px;
   }

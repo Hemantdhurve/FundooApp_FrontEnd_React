@@ -1,46 +1,20 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.main{
-    width: 516px;
-    height: 600px;
+/* .reg{
+     display: flex;
+    border-radius: 5px; 
 }
 .title{
-    width: 537px;
-    margin-top: 35px;
+    margin-top: 25px;
     padding-left: 35px;
-    border-bottom-width: 0px;
-    margin-bottom: 10px;
     font-size: 35px;
-
+    position: relative;
 }
 .sub-title{
-    width: 537px;
-    margin-top: 20px;
+     margin-top: 10px;
     padding-left: 35px;
-    border-bottom-width: 0px;
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 25px; 
 }
 
-
-.reg{
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    border-radius: 02%;
-    border: 1px solid rgb(230 230 230);
-    box-shadow: 1px 1px 1px 1px #f4f4f4;
-    height: auto;
-    width: auto;
-
-}
 .data-col{
     display: flex;
     flex-direction: column;
@@ -50,46 +24,25 @@ body{
 }
 .data{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 460px;
+    width: 33.5vw;
 }
-/* .data input{
-    border: 1px solid rgb(172, 171, 171);
-    border-radius: 5px;
-    outline: none;
-    margin: 5px 29px ;
-    height: 40px;
-    display: flex;
-    padding-right: 50px;
-    border-right-width: 2px;
-} */
+
 .user {
-    width: 460px;
+    width: 33.5vw;
 }
-/* .user input{
-    border: 1px solid rgb(172, 171, 171);
-    border-radius: 5px;
-    padding: 15px 330px 15px 8px;
-    outline: none;
-    margin: 5px 29px ;
-} */
+
 .p-tag{
-    width: 504px;
+    width: 30vw;
     padding-left: 15px;
-    padding-top: 0px;
-    margin-bottom: -8px;
-    margin-top: -19px;
-    margin-right: 0px;
+    margin-top: -17px;
     font-size: 13px;
     
 }
 .current{
-color: #1a73e8;
-padding-left: 3px;
-margin-bottom: 16px;
-margin-top: 5px;
-font-size: 16px;
+    color: #1a73e8;
+    padding-left: 3px;
+    font-size: 16px;
 }
 .checkbx{
     margin-left: 10px;
@@ -97,25 +50,23 @@ font-size: 16px;
 }
 .bot-nxt-bt{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-top: 35px;
-    width: 460px;
+    width: 33.5vw;
+    margin-top: 25px;
+    margin-bottom: 35px;
     
 }
 
 .signup-logo{
     width: 240px;
-    padding-top: 200px;
     justify-items: center;
-    padding-top: 145px;
+    padding-top: 120px;
     text-align: center;
-    padding-right: 40px;
 }
 .lgo{
-    height: 244px;
-    width: 244px;
+    height: 230px;
+    width: 230px;
 }
 .lgo-txt{
 margin-top: 5px;
-}
+} */

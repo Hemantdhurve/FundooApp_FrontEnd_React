@@ -1,4 +1,4 @@
-
+/* 
 .full-box3{
     display: flex;
     flex-direction: column;
@@ -49,17 +49,17 @@
     justify-content: space-between;
     padding: 4px; 
     
-}
+} */
 
 
     /* Modal CSS */
-.pin-btnmod{
+/* .pin-btnmod{
     padding-top: 13px;
     padding-right: 10px;
 }
 .ttl-des-pin{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     border-radius: 5px;
 }
 .inp-div{
@@ -90,4 +90,4 @@
 }   
 .close-btnmod{
     margin-right: 25px;
-}
+} */

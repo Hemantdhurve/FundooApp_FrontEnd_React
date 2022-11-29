@@ -15,8 +15,61 @@ import { createNoteAPI } from '../../services/Dataservice'
 import ColorPopper from '../colorPopper/ColorPopper';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import { makeStyles } from '@mui/styles'
+
+const useStyle = makeStyles({
+      note2Box: {
+            display: 'flex',
+            flexDirection: 'row',
+            borderColor: 'black',
+            width: '100%',
+            marginTop: '-30px',
+            justifyContent: 'center',
+      },
+      innerBox: {
+            display: 'flex',
+            flexDirection: 'column',
+            width: '44vw',
+            border: '1px solid #e0e0e0',
+            borderRadius: '8px',
+            boxShadow: '1px 1px 5px rgba(0,0,0,0.6)',
+      },
+      titleBox1: {
+            display: 'flex',
+            flexDirection: 'row',
+            height: '32%',
+            justifyContent: 'space-between',
+            width: '43.2vw',
+            
+      },
+      noteTxt2: {
+            paddingInlineStart: '2%',
+            outline: 'none',
+            border: 'none',
+            width: '42vw',
+            fontSize: 'medium',
+            height: '7vh',
+            borderRadius: '8px',
+      },
+      description: {
+            height: '45%',
+            alignItems: 'center',
+            paddingTop: '10px',
+            boxSizing: 'border-box',
+      },
+      logoContainer:{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            height: '33%',
+            width: '42vw',
+      },
+})
 
 function TakeNotes2(props) {
+
+      const classes=useStyle()
       const [createNote, setCreateNote] = useState({
             title: '',
             description: '',
@@ -54,19 +107,19 @@ function TakeNotes2(props) {
      
       return (
             <Box>
-                  <Box className='note2-box'>
-                        <Card className='inner-box' style={{backgroundColor:createNote.backgroundcolor}} elevation={3}>
-                              <Box className="titlebox1" >
-                                    <input className='note-txt2'style={{backgroundColor:createNote.backgroundcolor}} placeholder="Title" onChange={takeTitle} />
+                  <Box className={classes.note2Box}>
+                        <Card className={classes.innerBox} style={{backgroundColor:createNote.backgroundcolor}} elevation={3}>
+                              <Box className={classes.titleBox1} >
+                                    <input className={classes.noteTxt2} style={{backgroundColor:createNote.backgroundcolor}} placeholder="Title" onChange={takeTitle} />
                                     <Tooltip title='Pin note'>
                                           <IconButton size='large'><PushPinOutlinedIcon /></IconButton>
                                     </Tooltip>
                               </Box>
-                              <Box className='description'>
-                                    <input className='note-txt2' style={{backgroundColor:createNote.backgroundcolor}} placeholder="Take a note..." onChange={takeDescription} />
+                              <Box className={classes.description}>
+                                    <input className={classes.noteTxt2} style={{backgroundColor:createNote.backgroundcolor}} placeholder="Take a note..." onChange={takeDescription} />
                               </Box>
-                              <Box className='logo-container'>
-                                    <Box className='logo-note2'>
+                              <Box className={classes.logoContainer}>
+                                    <Box>
                                           <Tooltip title='Remind me'>
                                                 <IconButton size='large'><AddAlertOutlinedIcon /></IconButton>
                                           </Tooltip>
