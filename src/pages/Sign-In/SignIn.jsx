@@ -18,37 +18,78 @@ const useStyle=makeStyles({
     flexDirection: 'column',
     boxSizing:'border-box',
     borderRadius: '5px',
-    height: '470px',
-    width: '500px',
+    height: '75vh',
+    width: '36vw',
     position: 'relative',
     top: '15vh',
+    alignItems:'center',
     left:'30vw',
+    // border:'1px solid black',
+
   },
   Head:{
+    display: 'flex',
+    position: 'relative',
     textAlign: 'center',
-    padding: '10px',
-    marginTop: '20px',
+    top: '20px',
     fontSize: '25px',
   },
   subHead:{
+    display: 'flex',
+    position: 'relative',
+    top:'30px',
     textAlign: 'center',
-    padding: '3px',
     fontSize: '20px',
+    marginBottom:'10px',
   },
   txt:{
-    paddingLeft: '30px',
+    display: 'flex',
+    position: 'relative',
+    flexDirection:'column',
+    width:'90%',
+    top:'40px',
+    textAlign: 'center',
   },
   forgotBtn:{
-    justifyContent: 'space-around',
-    marginLeft: '24px',  
+    display: 'flex',
+    position: 'relative',
+    width:'100%',
+    top:'35px',
+    left:'25px',
   },
   loginBtn:{
     display:'flex',
     position:'relative',
-    marginTop: '30px',
+    top: '80px',
+    width:'90%',
     justifyContent:'space-between',
-    width:'440px',
-    marginLeft:'25px',
+  },
+
+  ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+    log:{
+      boxSizing:'border-box',
+      width:'100%',
+      position: 'relative',
+      left:'13px'
+    },
+  },
+  ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
+    log:{
+      width:'100%',
+      position: 'relative',
+      width:'100%',
+      alignItems:'center',
+      left:'13px',
+    },   
+  },
+  ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
+    log:{
+      display:'flex',
+      position: 'relative',
+      width:'60vw',
+      left:'20vw',
+      top:'13vh',
+    },  
   },
 })
 function SignIn() {
@@ -130,10 +171,10 @@ function SignIn() {
               <Box className={classes.subHead} > Sign-In</Box>
               <Box className={classes.subHead}>Use your Fundoo Account</Box>
               <Box className={classes.txt}>
-                  <Box >
-                      <TextField onChange={takeEmail} error={regexState.emailBorder} helperText={regexState.emailHelper} id="outlined-basic" label="Email or Phone" variant="outlined" margin='normal' style={{width:'435px'}}/>
-                      <TextField onChange={takePassword} error={regexState.passwordBorder} helperText={regexState.passwordHelper} id="outlined-basic" label="Password" variant="outlined" margin='normal' style={{width:'435px'}}/>
-                  </Box>
+                  
+                      <TextField onChange={takeEmail} error={regexState.emailBorder} helperText={regexState.emailHelper} id="outlined-basic" label="Email or Phone" variant="outlined" margin='normal' fullWidth="true" />
+                      <TextField onChange={takePassword} error={regexState.passwordBorder} helperText={regexState.passwordHelper} id="outlined-basic" label="Password" variant="outlined" margin='normal' fullWidth='true'/>
+                  
               </Box>              
               <Box className={classes.forgotBtn}>
                   <Button variant="text">Forgot Password?</Button>
