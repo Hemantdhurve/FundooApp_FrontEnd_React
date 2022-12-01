@@ -13,19 +13,16 @@ const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\")
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
 
 const useStyle=makeStyles({
-  body:{
-    display: 'flex',
-    justifyContent: 'center',
-    paddingTop: '60px',
-    marginTop: '60px',
-    position: 'relative',
-  },
-  log:{
+   log:{
     display: 'flex',
     flexDirection: 'column',
+    boxSizing:'border-box',
     borderRadius: '5px',
     height: '470px',
     width: '500px',
+    position: 'relative',
+    top: '15vh',
+    left:'30vw',
   },
   Head:{
     textAlign: 'center',

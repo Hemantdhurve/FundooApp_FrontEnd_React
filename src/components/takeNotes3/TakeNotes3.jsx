@@ -25,47 +25,79 @@ const useStyle=makeStyles({
       fullBox3:{
             display: 'flex',
             flexDirection: 'column',
-            height: '22vh',
-            marginTop: '30px',
-            width: '18vw',
-            marginRight: '30px',    
+            position:'relative',
+            height: '23vh',
+            boxSizing:'border-box',
+            //when changing width here also change in dashboard 
+            width: '18vw',   
             borderRadius: '8px',
+            marginBottom:'10px',
       },
       titleDecPin:{
             display: 'flex',
             flexDirection: 'row',
+            position:'relative',
       },
       titleBox3:{
             display: 'flex',
             flexDirection: 'column',
-            height: '15vh',
-            width: '50vw',
-            padding: '5px',
+            position:'relative',
+            boxSizing:'border-box',
+            height: '16vh',
+            width: '100%',
+            rowGap:'8px',
       },
       pinTk3:{
-            padding: '10px',
+            position:'relative',
+            marginTop:'10px',
       },
       noteTitle:{
-            height: '5vh',
-            paddingLeft: '10px',
-            justifyContent: 'center',
-            paddingTop: '10px',
-            marginBottom: '10px',
+            display:'flex',
+            position:'relative',
+            width:'95%',
+            top: '10px',
+            left:'10px',
             fontSize: 'large',
-            fontWeight: '500',
+            fontWeight: '400',           
       },
-      noteDesc:{
-            height: '5vh',
-            paddingLeft: '10px',
-            justifyContent: 'center',
-            paddingTop: '10px',
-            fontWeight: '500',
-      },
+     
       logoContainer3:{
             display: 'flex',
             flexDirection: 'row',
+            position:'realative',
+            boxSizing:'border-box',
+            width:'100%',
             justifyContent: 'space-between',
-            padding: '4px', 
+      },
+
+      ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+            fullBox3:{
+                  // display: 'flex',
+                  // flexDirection: 'column',
+                  // position:'relative',
+                  width: '82vw',   
+            }, 
+            logoContainer3:{
+                  width:'70%',
+            },          
+      
+      },
+      ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
+            fullBox3:{
+                  width: '42vw',   
+            },  
+            logoContainer3:{
+                  width:'100%',
+            },   
+      
+      },
+      ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
+            fullBox3:{
+                  width: '28vw',   
+            },  
+            logoContainer3:{
+                  width:'100%',
+            },         
       },
 
       //Css For Modal
@@ -73,21 +105,24 @@ const useStyle=makeStyles({
       ttlDesPin:{
             display: 'flex',
             flexDirection: 'row',
+            position:'relative',
+            height: '18vh',
       },
       inpDiv:{
             display: 'flex',
             flexDirection: 'column',
-            height: '16vh',
-            padding: '15px 15px',
-            width: '100%',
+            position:'relative',
+            height: '15vh',
+            top:'10px',
+            width: '93%',
+            left:'10px',
+            rowGap:'15px',
       },
       pinBtnmod:{
-            paddingTop: '13px',
-            paddingRight: '10px',
+            position:'relative',
+            top: '10px',
       },
-      noteTitlemod:{
-            marginBottom: '18px',
-      },
+     
       allIcon:{
             display: 'flex',
             flexDirection: 'row',
@@ -96,13 +131,22 @@ const useStyle=makeStyles({
       },
       groupBtnmod:{
             display: 'flex',
-            padding: '5px',
+            position:'relative',
+            left:'5px',
             width: '65%',
-            justifyContent: 'space-between',  
+            bottom:'5px',            
+            justifyContent: 'space-between',
       },
       closeBtnmod:{
-            marginRight: '25px',
+            position:'relative',
+            right:'15px',
+            bottom:'5px', 
       },
+      // ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+           
+      // },
+       // ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {}
+        // ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {}
 })
 
 function TakeNotes3(props) {
@@ -116,7 +160,6 @@ function TakeNotes3(props) {
             transform: 'translate(-50%, -50%)',
             width: 650,
             bgcolor: 'background.paper',
-            border: 'none',
             boxShadow: 30,
             outline:'none',
             // p: 7.5,
@@ -184,7 +227,7 @@ function TakeNotes3(props) {
                         <Box className={classes.titleDecPin}>
                               <Box className={classes.titleBox3} >
                                     <span className={classes.noteTitle} onClick={() => handleOpen(props.note)}>{props.note.title}</span>
-                                    <span className={classes.noteDesc} onClick={() => handleOpen(props.note)}>{props.note.description}</span>
+                                    <span className={classes.noteTitle} onClick={() => handleOpen(props.note)}>{props.note.description}</span>
                               </Box>
                               <Box className={classes.pinTk3}>
                                     <Tooltip title='Pin note'>
@@ -226,8 +269,8 @@ function TakeNotes3(props) {
                               <Box style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
                                     <Box className={classes.ttlDesPin} >
                                           <Box className={classes.inpDiv}>
-                                                <InputBase className={classes.noteTitlemod} defaultValue={modstate.title} onChange={takeTitle} />
-                                                <InputBase type='text' defaultValue={modstate.description} onChange={takeDescription} />
+                                                <InputBase  defaultValue={modstate.title} onChange={takeTitle} />
+                                                <InputBase  defaultValue={modstate.description} onChange={takeDescription} />
                                           </Box>
                                           <Box className={classes.pinBtnmod}>
                                                 <Tooltip title='Pin note'>

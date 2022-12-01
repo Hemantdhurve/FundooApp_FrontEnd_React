@@ -17,12 +17,17 @@ const useStyle=makeStyles({
     reg:{
       display: 'flex',
       borderRadius: '5px',
+      boxSizing:'border-box',
+      width:'60vw',
+      position:'relative',
+      left:'20vw',
+      top:'10vh',
+      
     },
     title:{
       marginTop: '25px',
       paddingLeft: '35px',
       fontSize: '35px',
-      position: 'relative',
     },
     subTitle:{
       marginTop: '10px',

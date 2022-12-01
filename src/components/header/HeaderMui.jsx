@@ -12,8 +12,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
@@ -56,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-            width: '45ch',
+            width: '40ch',
         },
     },
 }));
@@ -197,8 +195,8 @@ function HeaderMui(props) {
                         sx={{ display: { xs: 'none', sm: 'block',width:'12vw' } }}
                     >
                         <Box style={{ display: 'flex', flexDirection: 'row',alignItems:'center'}}>
-                            <Box style={{width:50}}>
-                                <img src='./assets/keep.png' style={{ width: 43, height: 43, marginTop: '5px' }} />
+                            <Box style={{width:'50px'}}>
+                                <img src='./assets/keep.png' style={{ width: 43, height: 43, marginTop: '7px' }} />
                             </Box>
                             {props.label}
                         </Box>
@@ -215,7 +213,7 @@ function HeaderMui(props) {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: {  xs: 'none', md: 'flex' }}}>
-                            <Box style={{width:'14vw'}}>
+                            <Box style={{width:'14vw',display:'flex',}}>
                                 <IconButton size="large">
                                     <Badge color="error">
                                         <RefreshIcon />
@@ -233,8 +231,6 @@ function HeaderMui(props) {
                                     <Badge  color="default">
                                         <SettingsIcon />
                                     </Badge>
-                                </IconButton>
-                                <IconButton >                                    
                                 </IconButton>
                             </Box>
                             <Box>

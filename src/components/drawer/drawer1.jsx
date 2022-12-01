@@ -15,27 +15,33 @@ import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import { connect } from 'react-redux';
 
-const drawerWidth = 260;
+const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
       width: drawerWidth,
-      marginTop: '10vh', 
-      boxShadow: '0px 0px 5px grey',
-      borderTop:'0px solid white',
+      top: '10vh', 
+      // boxShadow: '0px 0px 5px grey',
+      border:'hidden',
       transition: theme.transitions.create('width', {
          easing: theme.transitions.easing.sharp,
          duration: theme.transitions.duration.enteringScreen,
+         
       }),
+    ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+        marginTop: '40',
+    },
 });
 
 const closedMixin = (theme) => ({
-      border:'0px solid white',
-      marginTop: '10vh',
+      border:'hidden',
+      top: '10vh',
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      width: `calc(${theme.spacing(2)} + 0px)`,[theme.breakpoints.up('sm')]: {width: `calc(${theme.spacing(8)} + 1px)`,},
+      overflowX: 'hidden',
+      width: `calc(${theme.spacing(7)} + 1px)`,
+      [theme.breakpoints.up('sm')]: {width: `calc(${theme.spacing(8)} + 1px)`,},
 });
 
 
@@ -71,7 +77,7 @@ function Drawer1(props) {
   }
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <Drawer variant="permanent" open={props.headerState}>
 

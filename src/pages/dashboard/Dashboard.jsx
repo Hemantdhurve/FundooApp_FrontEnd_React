@@ -6,9 +6,47 @@ import { getAllNoteAPI } from '../../services/Dataservice'
 import TakeNotes3 from '../../components/takeNotes3/TakeNotes3'
 import Drawer1 from '../../components/drawer/drawer1'
 import HeaderMui from '../../components/header/HeaderMui'
+import { makeStyles } from '@mui/styles'
 
+const useStyle=makeStyles({
+    tk3Dash:{
+        display: 'flex',
+        boxSizing:'border-box',
+        position:'relative',
+        left: '280px',
+        width: '75vw',
+        top:'10vh',
+        flexWrap: 'wrap',
+        justifyContent:'space-between',       
+    },
 
+    ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+         tk3Dash:{
+        //     display:'flex',
+        //     flexDirection:'column',
+        //     position:'relative',
+            left: '60px',
+            width: '82vw',
+        }
+    },
+    ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
+        tk3Dash:{
+            display:'flex',
+            left: '72px',
+            width: '87vw',
+        }
+    },
+    ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
+     tk3Dash:{
+            display:'flex',
+            left: '72px',
+            width: '87vw',
+        }
+    },
+
+})
 function Dashboard() {
+    const classes=useStyle()
     const [toggle, setToggle]= useState(false)
     const [notesArray,setNotesArray]= useState([])
     const [headerState,setHeaderState]=useState(false)
@@ -81,7 +119,7 @@ function Dashboard() {
             {
                 toggle ? <TakeNotes2 closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
             }
-            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',width:'70vw',position:'relative',left:'280px'}}>
+            <div className={classes.tk3Dash}>
                 {
                     notesArray.map((note)=>(<TakeNotes3 note={note} autoRefresh={autoRefresh} />))
                 }

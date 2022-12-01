@@ -13,36 +13,85 @@ const useStyle = makeStyles({
   noteBox: {
     display: 'flex',
     flexDirection: 'row',
-    borderColor: 'black',
-    height: '40%',
-    marginTop: '-30px',
-    justifyContent: 'center',
+    position:'relative',
+    boxSizing:'border-box',
+    width:'45vw',
+    left:'400px',
+    height: '8vh',
+    top:'5vh',  
+
   },
 
   innerNotebox: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '44vw',
-    border: '1px solid rgb(199, 194, 194)', 
-    boxShadow: '1px 1px 5px rgba(0,0,0,0.6)',
-    borderRadius: '8px',
-    alignItems: 'center',
-  },
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'relative',
+        border: '1px solid #cecdcd',
+        borderRadius: '8px',
+},
 
   noteTxt: {
-    width: '75%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'relative',
+    width: '100%',
     paddingLeft: '10px',
     color: 'rgb(187, 185, 185)',
   },
 
-  btn:{
-    display: 'flex',
-    flexDirection: 'row',
-    width: '95%',
-    marginLeft: '56%',
-    position: 'relative',
+  // btn:{
+  //   display: 'flex',
+  //   flexDirection: 'row',
+  //   width: '95%',
+  //   marginLeft: '56%',
+  //   position: 'relative',
+  // },
+
+ ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+    noteBox: {
+      width: '82vw',
+      left: '60px',
+    },
+    innerNotebox: {
+        width: '100%',
+        height: '100%',
+    },
+    noteTxt: {
+        width: '100%'
+    },
   },
-  // ['']:{}
+ ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
+       noteBox: {
+      width: '87vw',
+      left: '70px',
+    },
+    innerNotebox: {
+        width: '100%',
+        height: '100%',
+    },
+    noteTxt: {
+        width: '100%',
+    },
+  },
+
+  ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
+    noteBox: {
+   width: '67vw',
+   left: '80px',
+ },
+ innerNotebox: {
+     width: '100%',
+     height: '100%',
+ },
+ noteTxt: {
+     width: '100%',
+ },
+}
 
 })
 function TakeNotes1(props) {
@@ -56,7 +105,9 @@ const classes=useStyle()
     <Box >
       <Box className={classes.noteBox} >
         <Card className={classes.innerNotebox} onClick={openNote}>
+          <Box>
           <Typography className={classes.noteTxt} >Take a Note...</Typography>
+          </Box>          
           <Box className={classes.btn}>
             <Tooltip title='New List'>
               <IconButton size='large'><CheckBoxOutlinedIcon /></IconButton>

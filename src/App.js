@@ -18,12 +18,12 @@ function App() {
       {/* <SignUp /> */}
       {/* <HeaderMui /> */}
       {/* <Header /> */}
-      {/* <TakeNotes1 /> */}
-      {/* <TakeNotes2 /> */}
+       {/* <TakeNotes1 />  */}
+       {/* <TakeNotes2 /> */}
       {/* <TakeNotes3 /> */}
       
       <Provider store={store}>
-          {/* <Dashboard /> */}
+           {/* <Dashboard />  */}
           <Router1 />
       </Provider> 
       </div>
