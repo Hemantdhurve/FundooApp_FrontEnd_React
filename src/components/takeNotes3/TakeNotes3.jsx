@@ -77,11 +77,11 @@ const useStyle = makeStyles({
             top: '25vh',
             left: '25vw',
             width: '48vw',
-            bgcolor: 'background.paper',
+            backgroundColor: 'white',
             boxShadow: 30,
             outline: 'none',
             // p: 7.5,
-            borderRadius: 2,
+            borderRadius: 8,
             flexWrap: 'wrap',
       },
 
@@ -128,9 +128,6 @@ const useStyle = makeStyles({
 
       ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
             fullBox3: {
-                  // display: 'flex',
-                  // flexDirection: 'column',
-                  // position:'relative',
                   width: '82vw',
             },
             logoContainer3: {
@@ -189,12 +186,6 @@ const useStyle = makeStyles({
             },
       },
 
-
-      // ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
-
-      // },
-      // ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {}
-      // ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {}
 })
 
 function TakeNotes3(props) {
@@ -273,7 +264,7 @@ function TakeNotes3(props) {
             <Box>
                   <Paper className={classes.fullBox3} elevation={4} style={{ backgroundColor: props.note.backgroundcolor, borderRadius: 8 }}>
                         <Box className={classes.titleDecPin}>
-                              <Box className={classes.titleBox3} >
+                              <Box className={classes.titleBox3} onClick={() => handleOpen(props.note)}>
                                     <span className={classes.noteTitle} onClick={() => handleOpen(props.note)}>{props.note.title}</span>
                                     <span className={classes.noteTitle} onClick={() => handleOpen(props.note)}>{props.note.description}</span>
                               </Box>
