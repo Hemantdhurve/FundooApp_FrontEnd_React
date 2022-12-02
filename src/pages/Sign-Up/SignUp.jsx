@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import { useNavigate } from 'react-router-dom';
+import Checkbox from '@mui/material/Checkbox';
 
 const firstnameRegex=/^([A-Z]{1}[a-z]{2,}$)/;
 const lastnameRegex=/^([A-Z]{1}[a-z]{2,}$)/;
@@ -20,72 +21,315 @@ const useStyle=makeStyles({
       boxSizing:'border-box',
       width:'60vw',
       position:'relative',
+      height:'92vh',
       left:'20vw',
-      top:'10vh',
-      
+      top:'4vh',
+      justifyContent: 'center',     
     },
-    title:{
-      marginTop: '25px',
-      paddingLeft: '35px',
-      fontSize: '35px',
-    },
-    subTitle:{
-      marginTop: '10px',
-      paddingLeft: '35px',
-      marginBottom: '15px',
-      fontSize: '25px',
-    },
+   
     dataCol:{
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-between',
-      paddingLeft: '35px',
-      paddingRight: '35px',
+      position:'relative',
+      boxSizing:'border-box',
+      alignItems: 'center',
+      textAlign: 'center',
+      justifyContent:'space-between',
+      height:'79vh',
+      top: '5vh',
+      width:'65%',
+    },
+    title:{
+      display: 'flex',
+      fontSize: '30px',     
+      width:'90%',
+      // border:'1px solid black',
+    },
+    subTitle:{
+      display: 'flex',
+      position:'relative',
+      top:'2px',
+      width:'90%',
+      fontSize: '22px',
+      // border:'1px solid black',
     },
     data:{
       display: 'flex',
       justifyContent: 'space-between',
-      width: '33.5vw',
+      position:'relative', 
+      width: '90%',
+      top:'25px',
     },
     user:{
-      width: '33.5vw',
+      display: 'flex',
+      position:'relative',
+      top:'35px',
+      width: '90%', 
+      // border:'1px solid black',
+
     },
     pTag:{
-      width: '30vw',
-      paddingLeft: '15px',
-      marginTop: '-17px',
+      display: 'flex',
+      position:'relative',
+      width: '85%',
+      top:'8px',
       fontSize: '13px',
+      // border:'1px solid black',
+
     },
     current:{
-      color: '#1a73e8',
-      paddingLeft: '3px',
-      fontSize: '16px',
+      display: 'flex',
+      position:'relative',
+      width: '90%',
+      bottom:'10px',
+      // border:'1px solid black',
+
     },
-    checkBx:{
-      marginLeft: '10px',
-      size: '40px',
+    datapass:{
+      display: 'flex',
+      justifyContent: 'space-between',
+      position:'relative', 
+      width: '90%',
+      top:'8px',
+      // border:'1px solid black',
+    },
+    pTag8:{
+      display: 'flex',
+      position:'relative',
+      width: '85%',
+      bottom:'18px',
+      fontSize: '13px',
+      // border:'1px solid black',
+    },
+    check:{
+      display: 'flex',
+      position:'relative',
+      bottom:'40px',
+      width:'90%',
+      // border:'1px solid black',
+      alignItems:'center',
     },
     botNxtBtn:{
       display: 'flex',
+      position:'relative',
       justifyContent: 'space-between',
-      width: '33.5vw',
-      marginTop: '25px',
-      marginBottom: '35px',
+      width: '90%',
+      // border:'1px solid black',
+
     },
     signUpLogo:{
-      width: '240px',
-      justifyItems: 'center',
-      paddingTop: '120px',
+      display: 'flex',
+      flexDirection:'column',
+      position:'relative',
+      alignItems:'center',
+      height:'50%',
+      top:'20vh',
+      right:'10px',
       textAlign: 'center',
+
     },
     lgo:{
+      display: 'flex',
+      position:'relative',
       height: '230px',
       width: '230px',
+
     },
     lgoTxt:{
+      display: 'flex',
+      position:'relative',
+      width:'65%',
       marginTop: '5px',
-    },
 
+    },
+    ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+      reg:{
+        width:'100%',
+        position:'relative',  
+        left:'0px',
+        top:'0px',
+        height:'100vh',
+       
+      },
+      dataCol:{
+        width:'100%',
+      },
+      data:{
+        display: 'flex',
+        flexDirection: 'column',
+        position:'relative',
+        rowGap:'10px',
+
+      },
+      pTag:{
+        display: 'flex',
+        position:'relative',
+        top:'20px',
+  
+      },
+      current:{
+        display: 'flex',
+        position:'relative',
+        width: '90%',
+        top:'5px',
+        textAlign:'start',
+  
+      },
+      pTag8:{
+        display: 'flex',
+        position:'relative',
+        textAlign:'start',
+        top:'1px',
+        width:'87%',
+      },
+      datapass:{
+        display: 'flex',
+        flexDirection: 'column',
+        rowGap:'10px',
+        position:'relative',
+
+      },
+      check:{
+        display: 'flex',
+        position:'relative',
+        bottom:'15px',
+        width:'90%',
+        alignItems:'center',
+      },
+      signUpLogo:{
+        display:'none',
+      },
+    },
+  
+    ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
+      reg:{
+        width:'100%',
+        position:'relative',  
+        left:'0px',
+        top:'0px',
+        height:'100vh',
+      },
+      dataCol:{
+        width:'100%',
+      },
+      data:{
+        display: 'flex',
+        flexDirection: 'column',
+        position:'relative',
+        rowGap:'10px',
+      },
+      pTag:{
+        display: 'flex',
+        position:'relative',
+        top:'20px',
+      },
+      current:{
+        display: 'flex',
+        position:'relative',
+        width: '90%',
+        top:'5px',
+        textAlign:'start',  
+      },
+      datapass:{
+        display: 'flex',
+        flexDirection: 'column',
+        rowGap:'10px',
+        position:'relative',
+
+      },
+      pTag8:{
+        display: 'flex',
+        position:'relative',
+        textAlign:'start',
+        bottom:'5px',
+        width:'87%',  
+      },
+      check:{
+        display: 'flex',
+        position:'relative',
+        bottom:'15px',
+        width:'90%',
+        alignItems:'center',
+      },
+    },
+    ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
+      reg:{
+        width:'60%',           
+      },     
+      dataCol:{
+        display: 'flex',
+        position:'relative',
+        height:'90%',
+        top: '5vh',
+        width:'100%',
+      },      
+      subTitle:{
+        // fontSize: '16px',
+      },
+      data:{
+        display: 'flex',
+        justifyContent: 'space-between',
+        position:'relative', 
+        width: '90%',
+        top:'25px',
+      },
+      user:{
+        display: 'flex',
+        position:'relative',
+        top:'35px',
+        width: '90%',   
+      },
+      pTag:{
+        display: 'flex',
+        position:'relative',
+        width: '85%',
+        top:'12px',
+        fontSize: '13px',
+      },
+      current:{
+        display: 'flex',
+        position:'relative',
+        // width: '93%',
+        width: '90%',
+        bottom:'10px',  
+      },
+      datapass:{
+        display: 'flex',
+        justifyContent: 'space-between',
+        position:'relative', 
+        width: '90%',
+        top:'8px',
+      },
+      pTag8:{
+        display: 'flex',
+        position:'relative',
+        bottom:'12px',
+        fontSize: '11px',
+        textAlign:'start',
+      },
+      check:{
+        display: 'flex',
+        position:'relative',
+        bottom:'30px',
+        width:'90%',
+        fontSize:'small',
+        alignItems:'center',
+      },
+     
+      signUpLogo:{
+        // display: 'none',
+        display: 'flex',
+        position:'relative',
+        width:'50%',  
+      },
+      lgo:{
+        height: '80%',
+        width: '80%',  
+      },
+      lgoTxt:{
+        width:'80%',  
+    },
+  },
 
 })
 
@@ -211,41 +455,38 @@ function SignUp()
 
   return (
     <Box>
-        <Paper className={classes.reg} elevation={3}>
-            <Box >
-                <Box className={classes.title}> Fundoo</Box>
-                <Box className={classes.subTitle}> Create your Fundoo Account</Box>
-                <Box className={classes.dataCol}>
+        <Paper className={classes.reg} elevation={3} >
+                <Box className={classes.dataCol}>                  
+                       <Box className={classes.title}> Fundoo</Box>
+                      <Box className={classes.subTitle}> Create your Fundoo Account</Box>                                     
                     <Box className={classes.data} >
-                        <TextField onChange={takeFirstName} error={regexState.firstNameBorder} helperText={regexState.firstNameHelper} id="outlined-basic" label="First Name" variant="outlined" size='small' margin='normal'/>          
-                        <TextField onChange={takeLastName} error={regexState.lastNameBorder} helperText={regexState.lastNameHelper} id="outlined-basic" label="Last Name" variant="outlined" size='small' margin='normal'/>          
+                        <TextField onChange={takeFirstName} error={regexState.firstNameBorder} helperText={regexState.firstNameHelper} id="outlined-basic" label="First Name" variant="outlined" size='small'/>          
+                        <TextField onChange={takeLastName} error={regexState.lastNameBorder} helperText={regexState.lastNameHelper} id="outlined-basic" label="Last Name" variant="outlined" size='small'/>          
                     </Box>
                     <Box className={classes.user}>
-                        <TextField onChange={takeEmail} error={regexState.emailBorder} helperText={regexState.emailHelper} id="outlined-basic" label="Username" variant="outlined" size='small' margin='normal' fullWidth={true}/>          
+                        <TextField onChange={takeEmail} error={regexState.emailBorder} helperText={regexState.emailHelper} id="outlined-basic" label="Username" variant="outlined" size='small' fullWidth={true}/>          
                     </Box>
                     <Box className={classes.pTag}>
                         <p>You can use Letters,numbers or Periods</p> 
                     </Box>
                     <Box className={classes.current}>
-                        <Button variant="text">Use my current email address instead</Button>
+                        <Button variant="text" size='small' >Use my current email address instead</Button>
                     </Box>
-                    <Box className={classes.data}>
-                        <TextField onChange={takePassword} error={regexState.passwordBorder} helperText={regexState.passwordHelper} id="outlined-basic" label="Password" variant="outlined" size='small' margin='normal'/>          
-                        <TextField onChange={takeConfirmPassword} error={regexState.confirmPasswordBorder} helperText={regexState.confirmPasswordHelper} id="outlined-basic" label="Confirm" variant="outlined" size='small' margin='normal'/>          
+                    <Box className={classes.datapass}>
+                        <TextField onChange={takePassword} error={regexState.passwordBorder} helperText={regexState.passwordHelper} id="outlined-basic" label="Password" variant="outlined" size='small' />          
+                        <TextField onChange={takeConfirmPassword} error={regexState.confirmPasswordBorder} helperText={regexState.confirmPasswordHelper} id="outlined-basic" label="Confirm" variant="outlined" size='small'/>          
                     </Box>
-                    <Box className={classes.pTag}>
+                    <Box className={classes.pTag8}>
                         <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
                     </Box>
-                    <Box className={classes.checkbx}>
-                        <input type= 'checkbox' value='Show Password' name = 'Show Password' /> <label>Show Password</label>
-                    </Box><br></br>
+                    <Box className={classes.check}>
+                        <Checkbox /><span>Show Password</span>                         
+                    </Box>
                     <Box className={classes.botNxtBtn}>
-                        <Button onClick={navSignPage} variant="text">Sign-in Instead</Button>
-                        <Button onClick={signUpSuccess} variant="contained">Next</Button>
+                        <Button onClick={navSignPage} size='small' variant="text">Sign-in Instead</Button>
+                        <Button onClick={signUpSuccess} size='small' variant="contained">Next</Button>
                     </Box>
                 </Box>
-            </Box>
-
             <Box className={classes.signUpLogo}>
                   <img className={classes.lgo} src='./assets/signup.svg' alt="Signup Logo"/>
                   <p className={classes.lgoTxt} >One account. All of Fundoo working for you.</p>

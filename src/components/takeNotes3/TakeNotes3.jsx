@@ -21,158 +21,206 @@ import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 
-const useStyle=makeStyles({
-      fullBox3:{
+const useStyle = makeStyles({
+      fullBox3: {
             display: 'flex',
             flexDirection: 'column',
-            position:'relative',
+            position: 'relative',
             height: '23vh',
-            boxSizing:'border-box',
+            boxSizing: 'border-box',
             //when changing width here also change in dashboard 
-            width: '18vw',   
+            width: '17vw',
             borderRadius: '8px',
-            marginBottom:'10px',
+            marginBottom: '15px',
+            marginRight:'15px',
       },
-      titleDecPin:{
+      titleDecPin: {
             display: 'flex',
             flexDirection: 'row',
-            position:'relative',
+            position: 'relative',
       },
-      titleBox3:{
+      titleBox3: {
             display: 'flex',
             flexDirection: 'column',
-            position:'relative',
-            boxSizing:'border-box',
+            position: 'relative',
+            boxSizing: 'border-box',
             height: '16vh',
             width: '100%',
-            rowGap:'8px',
+            rowGap: '8px',
       },
-      pinTk3:{
-            position:'relative',
-            marginTop:'10px',
+      pinTk3: {
+            position: 'relative',
+            marginTop: '10px',
       },
-      noteTitle:{
-            display:'flex',
-            position:'relative',
-            width:'95%',
+      noteTitle: {
+            display: 'flex',
+            position: 'relative',
+            width: '95%',
             top: '10px',
-            left:'10px',
+            left: '10px',
             fontSize: 'large',
-            fontWeight: '400',           
+            fontWeight: '400',
       },
-     
-      logoContainer3:{
+
+      logoContainer3: {
             display: 'flex',
             flexDirection: 'row',
-            position:'realative',
-            boxSizing:'border-box',
-            width:'100%',
+            position: 'realative',
+            boxSizing: 'border-box',
+            width: '100%',
             justifyContent: 'space-between',
       },
 
-      ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
-            fullBox3:{
-                  // display: 'flex',
-                  // flexDirection: 'column',
-                  // position:'relative',
-                  width: '82vw',   
-            }, 
-            logoContainer3:{
-                  width:'70%',
-            },          
-      
-      },
-      ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
-            fullBox3:{
-                  width: '42vw',   
-            },  
-            logoContainer3:{
-                  width:'100%',
-            },   
-      
-      },
-      ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
-            fullBox3:{
-                  width: '28vw',   
-            },  
-            logoContainer3:{
-                  width:'100%',
-            },         
+      //Css For Modal
+      modBox: {
+            position: 'relative',
+            top: '25vh',
+            left: '25vw',
+            width: '48vw',
+            bgcolor: 'background.paper',
+            boxShadow: 30,
+            outline: 'none',
+            // p: 7.5,
+            borderRadius: 2,
+            flexWrap: 'wrap',
       },
 
-      //Css For Modal
-     
-      ttlDesPin:{
+      ttlDesPin: {
             display: 'flex',
             flexDirection: 'row',
-            position:'relative',
+            position: 'relative',
             height: '18vh',
       },
-      inpDiv:{
+      inpDiv: {
             display: 'flex',
             flexDirection: 'column',
-            position:'relative',
+            position: 'relative',
             height: '15vh',
-            top:'10px',
+            top: '10px',
             width: '93%',
-            left:'10px',
-            rowGap:'15px',
+            left: '10px',
+            rowGap: '15px',
       },
-      pinBtnmod:{
-            position:'relative',
+      pinBtnmod: {
+            position: 'relative',
             top: '10px',
       },
-     
-      allIcon:{
+
+      allIcon: {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
       },
-      groupBtnmod:{
+      groupBtnmod: {
             display: 'flex',
-            position:'relative',
-            left:'5px',
+            position: 'relative',
+            left: '5px',
             width: '65%',
-            bottom:'5px',            
+            bottom: '5px',
             justifyContent: 'space-between',
       },
-      closeBtnmod:{
-            position:'relative',
-            right:'15px',
-            bottom:'5px', 
+      closeBtnmod: {
+            position: 'relative',
+            right: '15px',
+            bottom: '5px',
       },
+
+      ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+            fullBox3: {
+                  // display: 'flex',
+                  // flexDirection: 'column',
+                  // position:'relative',
+                  width: '82vw',
+            },
+            logoContainer3: {
+                  width: '70%',
+            },
+
+            //modal css
+            modBox: {
+                  position: 'relative',
+                  top: '25vh',
+                  left: '0vw',
+                  width: '100%',
+            }, 
+            ttlDesPin: {
+                  height:'20vh'
+            },
+            closeBtnmod: {
+                  left:'8px',
+            },
+
+      },
+      ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {
+            fullBox3: {
+                  width: '40.5vw',
+            },
+            logoContainer3: {
+                  width: '100%',
+            },
+            //modal css
+            modBox: {
+                  position: 'relative',
+                  top: '25vh',
+                  left: '10vw',
+                  width: '80%',
+            }, 
+            ttlDesPin: {
+                  height:'20vh'
+            },
+
+      },
+      ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {
+            fullBox3: {
+                  width: '27vw',
+            },
+            logoContainer3: {
+                  width: '100%',
+            },
+             //modal css
+             modBox: {
+                  position: 'relative',
+                  left: '20vw',
+                  width: '60%',
+            }, 
+            ttlDesPin: {
+                  height:'20vh'
+            },
+      },
+
+
       // ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
-           
+
       // },
-       // ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {}
-        // ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {}
+      // ['@media only screen and (min-width: 481px) and (max-width: 768px)']: {}
+      // ['@media only screen and (min-width: 769px) and (max-width: 1024px)']: {}
 })
 
 function TakeNotes3(props) {
-      const classes=useStyle()
+      const classes = useStyle()
 
       //For the Popup modal
-      const style = {
-            position: 'absolute',
-            top: '35%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 650,
-            bgcolor: 'background.paper',
-            boxShadow: 30,
-            outline:'none',
-            // p: 7.5,
-            borderRadius: 2,
-            flexWrap: 'wrap',
-      };
+      // const modBox = {
+      //       position: 'absolute',
+      //       top: '35%',
+      //       left: '50%',
+      //       transform: 'translate(-50%, -50%)',
+      //       width: 650,
+      //       bgcolor: 'background.paper',
+      //       boxShadow: 30,
+      //       outline:'none',
+      //       // p: 7.5,
+      //       borderRadius: 2,
+      //       flexWrap: 'wrap',
+      // };
 
       const [open, setOpen] = React.useState(false);
       const [modstate, setModState] = useState({
             noteId: '',
             title: '',
             description: '',
-            backgroundcolor:''
+            backgroundcolor: ''
       })
       const handleOpen = (modalobj) => {
             setOpen(true);
@@ -181,7 +229,7 @@ function TakeNotes3(props) {
                   noteId: modalobj.noteId,
                   title: modalobj.title,
                   description: modalobj.description,
-                  backgroundcolor:modalobj.backgroundcolor
+                  backgroundcolor: modalobj.backgroundcolor
             })
 
       }
@@ -214,7 +262,7 @@ function TakeNotes3(props) {
       const closebtn = (modId) => {
             console.log(modId)
             setOpen(false)
-            updatenoteAPI(modId,modstate)
+            updatenoteAPI(modId, modstate)
                   .then((response) => console.log(response))
                   .catch((error) => console.log(error))
             console.log("updated note")
@@ -223,7 +271,7 @@ function TakeNotes3(props) {
 
       return (
             <Box>
-                  <Paper className={classes.fullBox3} elevation={4} style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
+                  <Paper className={classes.fullBox3} elevation={4} style={{ backgroundColor: props.note.backgroundcolor, borderRadius: 8 }}>
                         <Box className={classes.titleDecPin}>
                               <Box className={classes.titleBox3} >
                                     <span className={classes.noteTitle} onClick={() => handleOpen(props.note)}>{props.note.title}</span>
@@ -265,12 +313,12 @@ function TakeNotes3(props) {
                         onClose={handleClose}
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"                  >
-                        <Box sx={style}>
-                              <Box style={{ backgroundColor: props.note.backgroundcolor,borderRadius:8 }}>
+                        <Box className={classes.modBox}>
+                              <Box style={{ backgroundColor: props.note.backgroundcolor, borderRadius: 8 }}>
                                     <Box className={classes.ttlDesPin} >
                                           <Box className={classes.inpDiv}>
-                                                <InputBase  defaultValue={modstate.title} onChange={takeTitle} />
-                                                <InputBase  defaultValue={modstate.description} onChange={takeDescription} />
+                                                <InputBase defaultValue={modstate.title} onChange={takeTitle} />
+                                                <InputBase defaultValue={modstate.description} onChange={takeDescription} />
                                           </Box>
                                           <Box className={classes.pinBtnmod}>
                                                 <Tooltip title='Pin note'>

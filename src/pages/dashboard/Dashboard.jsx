@@ -17,7 +17,7 @@ const useStyle=makeStyles({
         width: '75vw',
         top:'10vh',
         flexWrap: 'wrap',
-        justifyContent:'space-between',       
+        // justifyContent:'space-between',       
     },
 
     ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
