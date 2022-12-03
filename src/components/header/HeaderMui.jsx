@@ -18,6 +18,7 @@ import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AppsIcon from '@mui/icons-material/Apps';
 import { connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -86,6 +87,11 @@ function HeaderMui(props) {
     const menuOpen=()=>{
         props.headerPart()
     }
+    const navigate = useNavigate()
+
+  const navSignPage = () => {
+    navigate('/')
+  }
 
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
@@ -105,7 +111,9 @@ function HeaderMui(props) {
             onClose={handleMenuClose}
         >
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            {/* <MenuItem onClick={handleMenuClose}>My account</MenuItem> */}
+            <MenuItem onClick={navSignPage}>Logout</MenuItem>
+
         </Menu>
     );
 

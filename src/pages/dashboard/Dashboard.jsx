@@ -16,15 +16,11 @@ const useStyle=makeStyles({
         left: '280px',
         width: '75vw',
         top:'10vh',
-        flexWrap: 'wrap',
-        // justifyContent:'space-between',       
+        flexWrap: 'wrap',      
     },
 
     ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
          tk3Dash:{
-        //     display:'flex',
-        //     flexDirection:'column',
-        //     position:'relative',
             left: '60px',
             width: '82vw',
         }
@@ -58,7 +54,10 @@ function Dashboard() {
     const closeTakeNote2=()=>{
         setToggle(false)
     }
-     const getNote=()=>{
+    const autoRefresh=()=>{
+        getNote()
+    }
+    const getNote=()=>{
         getAllNoteAPI()
         .then((response)=>{
             let filterNotes=[]
@@ -93,10 +92,7 @@ function Dashboard() {
         .catch((error)=>{console.log(error)})
         console.log('Getting Notes List ')
      }
-     const autoRefresh=()=>{
-        getNote()
-     }
-
+    
     useEffect(()=>{
         getNote()       
     },[drawerState])
@@ -112,12 +108,12 @@ function Dashboard() {
     return (
     <div>
         {/* <Header headerPart={headerPart}/> */}
-        <HeaderMui headerPart={headerPart} />
+        <HeaderMui headerPart={headerPart}/>
 
         <Drawer1 headerState={headerState} listenDrawer={listenDrawer} />
         <div>
             {
-                toggle ? <TakeNotes2 closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
+                toggle ? <TakeNotes2 autoRefresh={autoRefresh} closeTakeNote2={closeTakeNote2} /> : <TakeNotes1 openTakeNote2={openTakeNote2} />
             }
             <div className={classes.tk3Dash}>
                 {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './TakeNotes2.css';
 import { Tooltip, InputBase } from '@mui/material';
 import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
@@ -35,13 +35,10 @@ const useStyle = makeStyles({
             flexDirection: 'column',
             position: 'relative',
             width: '45vw',
-            border: '1px solid #e0e0e0',
-            borderRadius: '8px',
             alignItems:'center',
-            boxSizing: 'border-box',
             left: '400px',
             height: '21vh',
-            top:'5vh', 
+            top:'5vh',
       },
       titleBox1: {
             display: 'flex',
@@ -49,7 +46,7 @@ const useStyle = makeStyles({
             height:'80%',           
             justifyContent: 'space-between',
             width:'100%',
-            
+            borderRadius: '8px',
       },
       txt2:{
             display: 'flex',
@@ -163,18 +160,20 @@ function TakeNotes2(props) {
 
       const closeButton = () => {
             //to get back to take note 1 when pressing close button onClick
-            props.closeTakeNote2()
+            props.closeTakeNote2()            
             console.log("created note", createNote)
-
             createNoteAPI(createNote)
-                  .then((response) => { console.log(response) })
+                  .then((response) => { console.log(response)
+                        props.autoRefresh() 
+                  })                 
                   .catch((error) => { console.log(error) })
             console.log('Notes Created')
+                
       }
 
       return (
             <Box>
-                  <Card className={classes.mainBox} style={{ backgroundColor: createNote.backgroundcolor }} elevation={3}>
+                  <Card className={classes.mainBox} style={{ backgroundColor: createNote.backgroundcolor,borderRadius:8 }} elevation={3}>
                         <Box className={classes.titleBox1} >
                                <Box className={classes.txt2}>
                                      <InputBase className={classes.noteTxt2}  placeholder="Title" onChange={takeTitle} />
@@ -215,7 +214,7 @@ function TakeNotes2(props) {
                                     </Tooltip>
                               </Box>
                               <Box className={classes.closeBtn}>
-                                    <Button variant="text" color='inherit' onClick={closeButton} >Close</Button>
+                                    <Button variant="text" color='inherit' onClick={closeButton}>Close</Button>
                               </Box>
                         </Box>
                   </Card>

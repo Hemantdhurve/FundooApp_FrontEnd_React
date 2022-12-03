@@ -228,7 +228,9 @@ function TakeNotes3(props) {
 
       const updateArchieve = (id) => {
             getArchievenoteAPI(id)
-                  .then((response) => console.log(response))
+                  .then((response) => {console.log(response)
+                        props.autoRefresh()
+                  })                    
                   .catch((error) => console.log(error))
             console.log('Archieve Successful')
       }
@@ -236,7 +238,10 @@ function TakeNotes3(props) {
 
       const deleteNote = (id) => {
             deletenoteAPI(id)
-                  .then((response) => console.log(response))
+                  .then((response) => {console.log(response)
+                        props.autoRefresh()
+                  })                    
+                  
                   .catch((error) => console.log(error))
             console.log("Deletion Successful")
       }
@@ -254,7 +259,9 @@ function TakeNotes3(props) {
             console.log(modId)
             setOpen(false)
             updatenoteAPI(modId, modstate)
-                  .then((response) => console.log(response))
+                  .then((response) => {console.log(response)
+                        props.autoRefresh()
+                  })                    
                   .catch((error) => console.log(error))
             console.log("updated note")
       }

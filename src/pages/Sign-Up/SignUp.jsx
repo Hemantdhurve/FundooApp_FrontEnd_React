@@ -35,7 +35,7 @@ const useStyle = makeStyles({
     justifyContent: 'space-between',
     height: '79vh',
     top: '5vh',
-    width: '56%',
+    width: '34vw',
     marginLeft: '30px',
   },
   title: {
@@ -53,8 +53,7 @@ const useStyle = makeStyles({
   data: {
     display: 'flex',
     justifyContent: 'space-between',
-    position: 'relative',
-    width: '100%',
+    position: 'relative',width: '100%',
     top: '25px',
   },
   user: {
@@ -395,7 +394,7 @@ function SignUp() {
           <Box className={classes.title}> Fundoo</Box>
           <Box className={classes.subTitle}> Create your Fundoo Account</Box>
           <Box className={classes.data} >
-            <TextField onChange={takeFirstName} error={regexState.firstNameBorder} helperText={regexState.firstNameHelper} id="outlined-basic" label="First Name" variant="outlined" size='small' />
+            <TextField onChange={takeFirstName} error={regexState.firstNameBorder} helperText={regexState.firstNameHelper} id="outlined-basic" label="First Name" variant="outlined" size='small' />             
             <TextField onChange={takeLastName} error={regexState.lastNameBorder} helperText={regexState.lastNameHelper} id="outlined-basic" label="Last Name" variant="outlined" size='small' />
           </Box>
           <Box className={classes.user}>
